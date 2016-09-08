@@ -1,0 +1,90 @@
+[ 2016-07-18T15:27:34+08:00 ] ::1 /student/index.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002664s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000401s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000491s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001932s ]
+
+[ 2016-07-18T15:28:05+08:00 ] ::1 /student/index.php/Home/Teacher/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001414s ]
+SQL: select * from zhengcy_Teacher   [ RunTime:0.0549s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+NOTIC: [8] Use of undefined constant vo - assumed 'vo' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant zcy_tsex - assumed 'zcy_tsex' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant vo - assumed 'vo' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant zcy_tsex - assumed 'zcy_tsex' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant vo - assumed 'vo' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant zcy_tsex - assumed 'zcy_tsex' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022930s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023054s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001255s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001387s ]
+
+[ 2016-07-18T15:28:16+08:00 ] ::1 /student/index.php/Home/Teacher/editBefore?id=5002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001828s ]
+SQL: select * from zhengcy_Teacher where zcy_Tno = '5002' [ RunTime:0.0384s ]
+
+[ 2016-07-18T15:28:21+08:00 ] ::1 /student/index.php/Home/Teacher/delete?ids%5B%5D=5002
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001503s ]
+SQL: delete from zhengcy_Teacher where zcy_Tno = 5002 [ RunTime:0.1008s ]
+
+[ 2016-07-18T15:28:21+08:00 ] ::1 /student/index.php/Home/Teacher/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002890s ]
+SQL: select * from zhengcy_Teacher   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000410s ]
+NOTIC: [8] Use of undefined constant vo - assumed 'vo' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant zcy_tsex - assumed 'zcy_tsex' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant vo - assumed 'vo' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+NOTIC: [8] Use of undefined constant zcy_tsex - assumed 'zcy_tsex' D:\swd\phpStudy\WWW\student\Application\Runtime\Cache\Home\2f776ce711082c7ddb105e1aedca79e2.php 第 102 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020608s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001680s ]
+

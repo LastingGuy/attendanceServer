@@ -1,0 +1,6 @@
+[ 2016-07-05T09:05:19+08:00 ] ::1 /student/index.php/Teacher/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+ERR: 无法加载模块:Teacher
+

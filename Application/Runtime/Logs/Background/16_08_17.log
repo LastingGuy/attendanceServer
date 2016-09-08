@@ -1,0 +1,679 @@
+[ 2016-08-17T09:18:14+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011443s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011507s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001890s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001927s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006036s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002497s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.002326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000007s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.002929s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 39 行.
+NOTIC: [2] unlink(d:/Upload//57b3bb562881b.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 41 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000961s ]
+
+[ 2016-08-17T10:49:18+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001633s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001669s ]
+NOTIC: [2] unlink(d:/Upload//57b3d0ae457cd.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001110s ]
+
+[ 2016-08-17T11:00:18+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000569s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.006303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002334s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.006030s ]
+NOTIC: [2] unlink(d:/Upload//57b3d34226a53.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 43 行.
+NOTIC: [2] DOMDocument::load(): I/O warning : failed to load external entity &quot;d:/new/123420160423.xml&quot; D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 82 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2016-08-17T11:01:50+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-08-17T11:01:55+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] unlink(d:/Upload//57b3d3a3428c4.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+NOTIC: [2] DOMDocument::load(): I/O warning : failed to load external entity &quot;d:/new/123420160423.xml&quot; D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 81 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001125s ]
+
+[ 2016-08-17T11:04:10+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] unlink(d:/Upload//57b3d42a1c788.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000862s ]
+
+[ 2016-08-17T11:04:16+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0018s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d430e507c.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001226s ]
+
+[ 2016-08-17T11:04:17+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0022s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d4314a547.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001576s ]
+
+[ 2016-08-17T11:04:17+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000909s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0024s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d43172004.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2016-08-17T11:05:43+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005900s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0021s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d487e2b76.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2016-08-17T11:06:32+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0026s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d4b831d13.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001544s ]
+
+[ 2016-08-17T11:07:32+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0058s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d4f4ed3a2.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001273s ]
+
+[ 2016-08-17T11:09:31+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006467s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001142s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Model.class.php 第 511 行.
+SQL: DELETE FROM `kaoqin_absence` WHERE ( sid='123456' and cid='1234' ) [ RunTime:0.0018s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d56bcc4be.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.012625s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.001841s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.010547s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.011290s ]
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`attendance`.`kaoqin_absence`, CONSTRAINT `fk_kaoqin_absence` FOREIGN KEY (`cid`, `sid`) REFERENCES `kaoqin_class_situtation` (`cid`, `sid`))
+ [ SQL语句 ] : INSERT INTO `kaoqin_absence` (`cid`,`sid`,`date`) VALUES ('1234','123456','20160423.xml')
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`attendance`.`kaoqin_absence`, CONSTRAINT `fk_kaoqin_absence` FOREIGN KEY (`cid`, `sid`) REFERENCES `kaoqin_class_situtation` (`cid`, `sid`))
+ [ SQL语句 ] : INSERT INTO `kaoqin_absence` (`cid`,`sid`,`date`) VALUES ('1234','123456','20160423.xml')
+
+[ 2016-08-17T11:11:53+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] unlink(d:/Upload//57b3d5f951af3.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`attendance`.`kaoqin_absence`, CONSTRAINT `fk_kaoqin_absence` FOREIGN KEY (`cid`, `sid`) REFERENCES `kaoqin_class_situtation` (`cid`, `sid`))
+ [ SQL语句 ] : INSERT INTO `kaoqin_absence` (`cid`,`sid`,`date`) VALUES ('1234','123456','20160423.xml')
+ERR: 1452:Cannot add or update a child row: a foreign key constraint fails (`attendance`.`kaoqin_absence`, CONSTRAINT `fk_kaoqin_absence` FOREIGN KEY (`cid`, `sid`) REFERENCES `kaoqin_class_situtation` (`cid`, `sid`))
+ [ SQL语句 ] : INSERT INTO `kaoqin_absence` (`cid`,`sid`,`date`) VALUES ('1234','123456','20160423.xml')
+
+[ 2016-08-17T11:13:51+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0011s ]
+NOTIC: [2] Illegal offset type in isset or empty D:\www\Apache24\htdocs\attendance\ThinkPHP\Library\Think\Model.class.php 第 511 行.
+SQL: DELETE FROM `kaoqin_absence` WHERE ( sid='123456' and cid='1234' ) [ RunTime:0.0008s ]
+NOTIC: [2] mkdir(): File exists D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 40 行.
+NOTIC: [2] unlink(d:/Upload//57b3d66fd1745.xml): No such file or directory D:\www\Apache24\htdocs\attendance\Application\Background\Controller\UploadController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `kaoqin_absence` [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005114s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+SQL: INSERT INTO `kaoqin_absence` (`cid`,`sid`,`date`) VALUES ('1234','123456','20160423.xml') [ RunTime:0.0104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000826s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2016-08-17T11:14:38+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+
+[ 2016-08-17T18:04:53+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse%EF%BC%9Fteacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000762s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001316s ]
+ERR: 非法操作:getCourse？teacher_id=12313
+
+[ 2016-08-17T18:05:01+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0034s ]
+ERR: Think\Model:relation方法不存在！
+
+[ 2016-08-17T18:05:23+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0016s ]
+ERR: Think\Model:relation方法不存在！
+
+[ 2016-08-17T18:06:50+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001601s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0039s ]
+ERR: Think\Model:relation方法不存在！
+
+[ 2016-08-17T18:06:54+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0051s ]
+ERR: Think\Model:relation方法不存在！
+
+[ 2016-08-17T18:07:24+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001323s ]
+
+[ 2016-08-17T18:28:28+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001448s ]
+
+[ 2016-08-17T18:29:46+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000862s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2016-08-17T18:29:47+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2016-08-17T18:29:48+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000974s ]
+
+[ 2016-08-17T18:29:48+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001117s ]
+
+[ 2016-08-17T18:29:48+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001149s ]
+
+[ 2016-08-17T18:29:49+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2016-08-17T18:29:49+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001188s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001200s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001285s ]
+
+[ 2016-08-17T18:29:49+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000957s ]
+
+[ 2016-08-17T18:30:22+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-08-17T18:31:25+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001517s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001122s ]
+
+[ 2016-08-17T18:57:16+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001482s ]
+
+[ 2016-08-17T18:58:54+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2016-08-17T18:59:59+08:00 ] ::1 /attendance/index.php/Background/GetXml/getCourse?teacher_id=12313
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `kaoqin_class_situtation` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `kaoqin_teacher` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `kaoqin_teacher` WHERE ( 1=1 AND tid='12313' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(sid) AS tp_count FROM `kaoqin_class_situtation` WHERE ( cid='123' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000951s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2016-08-17T21:47:53+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000975s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010824s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001221s ]
+
+[ 2016-08-17T21:48:01+08:00 ] ::1 /attendance/index.php/Background/Upload/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006558s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000805s ]
+
