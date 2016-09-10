@@ -33,7 +33,7 @@ class UploadController extends Controller {
         $oldfile = C("UPLOAD_ROOT").'/'.$info['file']['savename'];
         echo $oldfile;
         echo "<br/>";
-        echo $info['file']['savename'];
+        echo $info['file']['name'];
         //判断文件是否已经存在并处理
         $course_id = $this->handleXml($oldfile,$info['file']['name']);
 
