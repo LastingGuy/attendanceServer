@@ -41,7 +41,8 @@ class UploadController extends Controller {
         $newfile = $newpath.'/'.$newname;
 
         mkdir($newpath,0777,true);
-        rename($oldfile,$newfile);
+        echo 'test';
+        $this->success(rename($oldfile,$newfile));
         unlink($oldfile);
 
         //对新文件进行处理
