@@ -101,7 +101,7 @@ class UploadController extends Controller {
                     $data['cid'] = $course_id;
                     $data['sid'] = $stu_id;
                     $data['date'] = $filename;
-                    $this->success($course_id." ".$stu_id." ".$filename);
+                    //$this->success($course_id." ".$stu_id." ".$filename);
                     $model->add($data);
                 }
             }
