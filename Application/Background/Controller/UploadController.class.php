@@ -57,7 +57,9 @@ class UploadController extends Controller {
         $xml = new \DOMDocument();
         $course_id = null;
         //找到课程id
-        if($xml->load($oldfile)){
+        $flag = $xml->load($oldfile);
+        echo $oldfile;
+        if($flag){
             $root = $xml->documentElement;
             $elm = $root->getElementsByTagName("courseid");
             $course_id = $elm[0]->nodeValue;
@@ -79,6 +81,8 @@ class UploadController extends Controller {
                 }
             }
         }
+        else
+            echo '文件不存在';
         return $course_id;
     }
 
