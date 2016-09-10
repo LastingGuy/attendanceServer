@@ -64,7 +64,11 @@ class UploadController extends Controller {
         if($flag){
             $root = $xml->documentElement;
             $elm = $root->getElementsByTagName("courseid");
-            $course_id = $elm[0]->nodeValue;
+            // $course_id = $elm->g
+            foreach($elm as $v)
+            {
+                $course_id = $v->nodeValue;
+            }
 
             //查看文件是否存在
             if(file_exists(C("SAVE_ROOT").'/'.$course_id.'/'.$filename)) {
