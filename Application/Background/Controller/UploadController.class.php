@@ -25,16 +25,12 @@ class UploadController extends Controller {
 
         $info = $upload->upload();
         if(!$info){ //上传错误提示错误信息
-            //echo 'fail';
-           $this->error($upload->getError());
+            echo 'error';
         }else{ //上传成功
            //$this->success('上传成功！');
         }
         $oldfile = C("UPLOAD_ROOT").'/'.$info['file']['savename'];
-        echo $oldfile;
-        echo "<br/>";
-        echo $info['file']['name'];
-        //判断文件是否已经存在并处理
+        //判断文件是否已经存在并处理:
         $course_id = $this->handleXml($oldfile,$info['file']['name']);
 
 
@@ -43,11 +39,8 @@ class UploadController extends Controller {
         $newfile = $newpath.'/'.$newname;
 
         mkdir($newpath,0777,true);
-        // echo 'test';
-        $this->success(rename($oldfile,$newfile));
+        rename($oldfile,$newfile);
         unlink($oldfile);
-        // echo $course_id;
-        // move_uploaded_file($oldfile,$newfile);
         //对新文件进行处理
         $this->handleNewXml($newpath,$newname);
 
@@ -60,11 +53,10 @@ class UploadController extends Controller {
         $course_id = null;
         //找到课程id
         $flag = $xml->load($oldfile);
-        echo $oldfile;
+    
         if($flag){
             $root = $xml->documentElement;
             $elm = $root->getElementsByTagName("courseid");
-            // $course_id = $elm->g
             foreach($elm as $v)
             {
                 $course_id = $v->nodeValue;
@@ -87,8 +79,7 @@ class UploadController extends Controller {
                 }
             }
         }
-        else
-            echo '文件不存在';
+       
         return $course_id;
     }
 
