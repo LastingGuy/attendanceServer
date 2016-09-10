@@ -98,7 +98,10 @@ class UploadController extends Controller {
         if($xml->load($filepath.'/'.$filename)) {
             $root = $xml->documentElement;
             $elm = $root->getElementsByTagName("courseid");
-            $course_id = $elm[0]->nodeValue;
+            foreach($elm as $v)
+            {
+                $course_id = $v->nodeValue;
+            }
             $elm = $root->getElementsByTagName("stu");
             $model = D("Absence");
             foreach($elm as $node) {
