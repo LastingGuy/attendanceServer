@@ -41,10 +41,11 @@ class UploadController extends Controller {
         $newfile = $newpath.'/'.$newname;
 
         mkdir($newpath,0777,true);
-        echo 'test';
-        $this->success(rename($oldfile,$newfile));
-        unlink($oldfile);
+        // echo 'test';
+        // $this->success(rename($oldfile,$newfile));
+        // unlink($oldfile);
 
+        move_uploaded_file($oldfile,$newfile);
         //对新文件进行处理
         $this->handleNewXml($newpath,$newname);
 
