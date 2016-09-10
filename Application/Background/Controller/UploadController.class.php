@@ -44,7 +44,7 @@ class UploadController extends Controller {
         // echo 'test';
         // $this->success(rename($oldfile,$newfile));
         // unlink($oldfile);
-
+        echo $course_id;
         move_uploaded_file($oldfile,$newfile);
         //对新文件进行处理
         $this->handleNewXml($newpath,$newname);
