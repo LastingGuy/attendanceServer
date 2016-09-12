@@ -133,7 +133,6 @@ class StudentController extends Controller
             header('Location:'.U("Home/Index/index"));
         }
         //得到数据
-
         $data['sid'] = I("get.id");
         $data['sname'] = I("get.name");
         $data['ssex'] = I("get.sex");

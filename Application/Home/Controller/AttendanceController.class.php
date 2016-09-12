@@ -20,6 +20,7 @@ class AttendanceController extends Controller {
         $model = D('Absence');
         $list = $model->select();
         $this->assign("list",$list);
+
         $this->display();
     }
     
