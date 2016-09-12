@@ -9,17 +9,12 @@ namespace Home\Controller;
 use Think\Controller;
 use Think\Exception;
 class AttendanceController extends Controller {
-    public function index(){
+    public function studentQuery(){
         if(!session('?admin'))
         {
             header('Location:'.U("Home/Index/index"));
         }
 
-        $res_path = C("RES_PATH");
-        $this->assign("res_path",$res_path);
-        $model = D('Absence');
-        $list = $model->select();
-        $this->assign("list",$list);
 
         $this->display();
     }
