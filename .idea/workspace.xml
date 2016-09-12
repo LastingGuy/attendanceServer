@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Teacher/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+            <state relative-caret-position="1044">
+              <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -99,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Attendance/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2268">
-              <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+            <state relative-caret-position="180">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -183,8 +183,8 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Class/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Course/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Course/result.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Teacher/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Attendance/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Teacher/index.html" />
       </list>
     </option>
   </component>
@@ -532,12 +532,12 @@
       <workItem from="1473470999870" duration="2056000" />
       <workItem from="1473493506509" duration="358000" />
       <workItem from="1473497044426" duration="1577000" />
-      <workItem from="1473661758134" duration="3562000" />
+      <workItem from="1473661758134" duration="4029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248549000" />
+    <option name="totallyTimeSpent" value="249016000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -951,18 +951,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Teacher/index.html">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Attendance/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="180">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Attendance/index.html">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Teacher/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2268">
-          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+        <state relative-caret-position="1044">
+          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
           <folding />
         </state>
       </provider>
