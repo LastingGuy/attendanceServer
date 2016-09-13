@@ -6,12 +6,13 @@
     <title>Lumino - Dashboard</title>
 
     <link href="<?php echo ($res_path); ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/datepicker3.css" rel="stylesheet">
     <link href="<?php echo ($res_path); ?>/css/bootstrap-table.css" rel="stylesheet">
     <link href="<?php echo ($res_path); ?>/css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="<?php echo ($res_path); ?>/js/html5shiv.js"></script>
-    <script src="<?php echo ($res_path); ?>/js/respond.min.js"></script>
+    <script src="<?php echo ($res_path); ?>//respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -25,7 +26,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!-- 头部 -->
             <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
 <ul class="user-menu">
     <li class="dropdown pull-right">
@@ -60,40 +60,76 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-            <li class="active">课程管理</li>
+            <li class="active">出勤率查询</li>
         </ol>
     </div><!--/.row-->
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">课 程 &nbsp;<?php echo ($course_id); ?> <?php echo ($course_name); ?>&nbsp; 的 考 勤 列 表</div>
-                <div class="panel-body">
 
-                    <table id="table" data-toggle="table" data-url=""  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
-                        <thead>
-                        <tr>
-                            <th data-field="state" data-checkbox="true" >Item ID</th>
-                            <th data-field="date" > 日 期</th>
-                            <th data-field="look"> 查 看</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
-                                <td></td>
-                                <td><?php echo ($vo); ?></td>
-                                <td><a class="btn btn-primary btn-xs" href="../Course/result?course_id=<?php echo ($course_id); ?>&course_name=<?php echo ($course_name); ?>&date=<?php echo ($vo); ?>">查 看</a></td>
-                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                        </tbody>
-                    </table>
+    <ul class="nav nav-pills" role="tablist">
+        <li role="presentation"><a href="../Attendance/studentQuery">学生查询</a></li>
+        <li role="presentation"  class="active"><a href="../Attendance/courseQuery">课程查询</a></li>
+        <li role="presentation"><a href="../Attendance/countryQuery">国籍查询</a></li>
+    </ul>
+    <div style="padding: 15px"></div>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">课 程 到 课 率 查 询</div>
+        <div class="panel-body">
+            <form class="form-horizontal"  enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label  class="col-lg-1 col-lg-offset-1 col-sm-3 control-label">课程号</label>
+                    <div class="col-lg-2">
+                        <input type="text" class="form-control" placeholder="请输入课程号"  id="sid" name="sid" >
+                    </div>
+
+                    <button type="button" class="btn btn-primary">查 询</button>
+                    <button type="button" class="btn btn-primary">全 部 查 询</button>
                 </div>
-            </div>
+            </form>
+            <table id="table" data-toggle="table" data-url=""  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+                <thead>
+                <tr>
+                    <th data-field="state" data-checkbox="true" >Item ID</th>
+                    <th data-field="id" data-sortable="true">课程号</th>
+                    <th data-field="name">课程名</th>
+                    <th data-field="teacher_name">教师工号</th>
+                    <th data-field="teacher_id">教师名</th>
+                    <th data-field="attendance">该课到课率</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
         </div>
     </div>
+
+
 </div>
 
 
 <script src="<?php echo ($res_path); ?>/js/jquery-1.11.1.min.js"></script>
 <script src="<?php echo ($res_path); ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo ($res_path); ?>/js/bootstrap-table.js"></script>
+<script src="<?php echo ($res_path); ?>/js/locale/bootstrap-table-zh-CN.js"></script>
+<script>
+    var $remove = $('#remove');
+    var $table = $('#table');
+    $table.on('check.bs.table uncheck.bs.table ' +
+            'check-all.bs.table uncheck-all.bs.table', function () {
+        $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+        // save your data, here just save the current page
+        selections = getIdSelections();
+        // push or splice the selections if you want to save all data selections
+    });
 
+    function getIdSelections() {
+        return $.map($table.bootstrapTable('getSelections'), function (row) {
+            return row.id
+        });
+    }
+
+
+</script>
+</body>
 </html>

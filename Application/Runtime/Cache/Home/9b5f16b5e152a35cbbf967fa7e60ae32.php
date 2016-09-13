@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lumino - Dashboard</title>
 
-    <link href="{$res_path}/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{$res_path}/css/datepicker3.css" rel="stylesheet">
-    <link href="{$res_path}/css/bootstrap-table.css" rel="stylesheet">
-    <link href="{$res_path}/css/styles.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/datepicker3.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/bootstrap-table.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
-    <script src="{$res_path}/js/html5shiv.js"></script>
-    <script src="{$res_path}//respond.min.js"></script>
+    <script src="<?php echo ($res_path); ?>/js/html5shiv.js"></script>
+    <script src="<?php echo ($res_path); ?>//respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -26,7 +26,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <include file="Public/header" />
+            <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+<ul class="user-menu">
+    <li class="dropdown pull-right">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+    </li>
+</ul>
         </div>
     </div><!-- /.container-fluid -->
 </nav>
@@ -38,7 +48,12 @@
         </div>
     </form>
     <!--包括导航栏-->
-    <include file="Public/navigation" />
+    <ul class="nav menu">
+    <li><a href="../Course/index"><span class="glyphicon glyphicon-list-alt"></span> 课程管理</a></li>
+    <li><a href="../Student/index"><span class="glyphicon glyphicon-pencil"></span> 学生管理</a></li>
+    <li><a href="../Teacher/index"><span class="glyphicon glyphicon-pencil"></span> 教师管理</a></li>
+    <li><a href="../Attendance/studentQuery"><span class="glyphicon glyphicon-pencil"></span> 出勤率查询</a></li>
+</ul>
 </div><!--/.sidebar-->
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -72,8 +87,8 @@
                         <input type="text" class="form-control" placeholder="请输入课程号"  id="cid" name="cid" >
                     </div>
 
-                    <button type="button" class="btn btn-primary" onclick="queryStudent()">查 询</button>
-                    <button type="button" class="btn btn-primary" onclick="queryAllStudent()">全 部 查 询</button>
+                    <button type="button" class="btn btn-primary">查 询</button>
+                    <button type="button" class="btn btn-primary">全 部 查 询</button>
                 </div>
             </form>
             <table id="table" data-toggle="table" data-url=""  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
@@ -127,10 +142,10 @@
 </div>
 
 
-<script src="{$res_path}/js/jquery-1.11.1.min.js"></script>
-<script src="{$res_path}/js/bootstrap.min.js"></script>
-<script src="{$res_path}/js/bootstrap-table.js"></script>
-<script src="{$res_path}/js/locale/bootstrap-table-zh-CN.js"></script>
+<script src="<?php echo ($res_path); ?>/js/jquery-1.11.1.min.js"></script>
+<script src="<?php echo ($res_path); ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo ($res_path); ?>/js/bootstrap-table.js"></script>
+<script src="<?php echo ($res_path); ?>/js/locale/bootstrap-table-zh-CN.js"></script>
 <script>
     var $remove = $('#remove');
     var $table = $('#table');
@@ -148,26 +163,6 @@
         });
     }
 
-    function queryStudent(){
-        var stu_id = $('#sid').val();
-        var cour_id = $('#cid').val();
-
-        $.get("../Course/add",{
-            "sid":stu_id,
-            "cid":cour_id
-        },function(data,status){
-            var tbody = $('#tbody');
-            var tbody2 = $('#tbody2');
-
-            tbody2.empty();
-            for()
-            tbody.appendChild("");
-        });
-    }
-
-    function queryAllStudent(){
-
-    }
 
 </script>
 </body>
