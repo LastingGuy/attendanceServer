@@ -1,0 +1,216 @@
+[ 2016-09-13T16:11:59+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000594s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='123' )  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 102 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 103 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010567s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000930s ]
+
+[ 2016-09-13T16:20:30+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 102 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 103 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2016-09-13T16:24:24+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001238s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001307s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 105 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 106 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000989s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2016-09-13T16:25:49+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 107 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 108 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010244s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2016-09-13T16:26:05+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 107 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 108 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000809s ]
+
+[ 2016-09-13T16:26:31+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 107 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 108 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001249s ]
+
+[ 2016-09-13T16:27:18+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 109 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000912s ]
+
+[ 2016-09-13T16:27:55+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 110 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 111 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-09-13T16:28:10+08:00 ] ::1 /attendance/index.php/Teacher/Course/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `kaoqin_course` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `kaoqin_course` WHERE ( tid='12313' )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 110 行.
+NOTIC: [8] Undefined variable: stu_data D:\www\Apache24\htdocs\attendance\Application\Runtime\Cache\Teacher\1e9d6b99b6f84fd58738cba914255438.php 第 111 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+

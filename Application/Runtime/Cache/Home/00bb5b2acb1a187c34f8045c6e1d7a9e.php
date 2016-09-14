@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lumino - Dashboard</title>
 
-    <link href="{$res_path}/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{$res_path}/css/datepicker3.css" rel="stylesheet">
-    <link href="{$res_path}/css/bootstrap-table.css" rel="stylesheet">
-    <link href="{$res_path}/css/styles.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/datepicker3.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/bootstrap-table.css" rel="stylesheet">
+    <link href="<?php echo ($res_path); ?>/css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
-    <script src="{$res_path}/js/html5shiv.js"></script>
-    <script src="{$res_path}//respond.min.js"></script>
+    <script src="<?php echo ($res_path); ?>/js/html5shiv.js"></script>
+    <script src="<?php echo ($res_path); ?>//respond.min.js"></script>
     <![endif]-->
 
 </head>
@@ -26,7 +26,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <include file="Public/header" />
+            <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+<ul class="user-menu">
+    <li class="dropdown pull-right">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+    </li>
+</ul>
         </div>
     </div><!-- /.container-fluid -->
 </nav>
@@ -38,7 +48,12 @@
         </div>
     </form>
     <!--包括导航栏-->
-    <include file="Public/navigation" />
+    <ul class="nav menu">
+    <li><a href="../Course/index"><span class="glyphicon glyphicon-list-alt"></span> 课程管理</a></li>
+    <li><a href="../Student/index"><span class="glyphicon glyphicon-pencil"></span> 学生管理</a></li>
+    <li><a href="../Teacher/index"><span class="glyphicon glyphicon-pencil"></span> 教师管理</a></li>
+    <li><a href="../Attendance/studentQuery"><span class="glyphicon glyphicon-pencil"></span> 出勤率查询</a></li>
+</ul>
 </div><!--/.sidebar-->
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -51,34 +66,34 @@
 
     <ul class="nav nav-pills" role="tablist">
         <li role="presentation"><a href="../Attendance/studentQuery">学生查询</a></li>
-        <li role="presentation"><a href="../Attendance/courseQuery">课程查询</a></li>
-        <li role="presentation" class="active"><a href="../Attendance/countryQuery">国籍查询</a></li>
+        <li role="presentation"  class="active"><a href="../Attendance/courseQuery">课程查询</a></li>
+        <li role="presentation"><a href="../Attendance/countryQuery">国籍查询</a></li>
     </ul>
     <div style="padding: 15px"></div>
 
     <div class="panel panel-info">
-        <div class="panel-heading">到 课 率 查 询</div>
+        <div class="panel-heading">课 程 到 课 率 查 询</div>
         <div class="panel-body">
             <form class="form-horizontal"  enctype="multipart/form-data">
 
                 <div class="form-group">
-                    <label  class="col-lg-1 col-lg-offset-1 col-sm-3 control-label">国 家</label>
+                    <label  class="col-lg-1 col-lg-offset-1 col-sm-3 control-label">课程号</label>
                     <div class="col-lg-2">
-                        <input type="text" class="form-control" placeholder="请输入国家"  id="tid" name="tid" >
+                        <input type="text" class="form-control" placeholder="请输入课程号"  id="cid" name="cid" >
                     </div>
 
-                    <button type="button" class="btn btn-primary" >查 询</button>
-                    <button type="button" class="btn btn-primary">全 部 查 询</button>
+                    <button type="button" class="btn btn-primary" onclick="courseQuery()">查 询</button>
                 </div>
-
             </form>
             <table id="table" data-toggle="table" data-url=""  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
                 <thead>
                 <tr>
                     <th data-field="state" data-checkbox="true" >Item ID</th>
-                    <th data-field="id" data-sortable="true">学 号</th>
-                    <th data-field="name">姓 名</th>
-                    <th data-field="attendance">总到课率</th>
+                    <th data-field="cid" data-sortable="true">课程号</th>
+                    <th data-field="cname">课程名</th>
+                    <th data-field="tid">教师工号</th>
+                    <th data-field="tname">教师名</th>
+                    <th data-field="rate">该课到课率</th>
                 </tr>
                 </thead>
                 <tbody id="tbody">
@@ -92,10 +107,10 @@
 </div>
 
 
-<script src="{$res_path}/js/jquery-1.11.1.min.js"></script>
-<script src="{$res_path}/js/bootstrap.min.js"></script>
-<script src="{$res_path}/js/bootstrap-table.js"></script>
-<script src="{$res_path}/js/locale/bootstrap-table-zh-CN.js"></script>
+<script src="<?php echo ($res_path); ?>/js/jquery-1.11.1.min.js"></script>
+<script src="<?php echo ($res_path); ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo ($res_path); ?>/js/bootstrap-table.js"></script>
+<script src="<?php echo ($res_path); ?>/js/locale/bootstrap-table-zh-CN.js"></script>
 <script>
     var $remove = $('#remove');
     var $table = $('#table');
@@ -113,18 +128,20 @@
         });
     }
 
-    function countryQuery(){
-        var tea_id = $('#tid').val();
+    function courseQuery(){
+        var cour_id = $('#cid').val();
 
         $.get("../AttendanceRate/queryCourse",{
-            "tid":tea_id
+            "cid":cour_id
         },function(data,status){
+
             if(data==null)
                 $('#table').bootstrapTable('removeAll');
             else
                 $('#table').bootstrapTable('load',data);
         });
     }
+
 </script>
 </body>
 </html>

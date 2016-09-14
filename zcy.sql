@@ -41,6 +41,7 @@ create table kaoqin_course
 	cid varchar(20),
     cname varchar(20),
     tid varchar(20),
+    times  int unsigned NULL DEFAULT 0,
     constraint pk_kaoqin_course primary key(cid)
 );
 
@@ -49,7 +50,7 @@ create table kaoqin_class_situtation
 (
 	cid varchar(20),
     sid varchar(20),
-    absence_number int,
+    absence_number nt unsigned NULL DEFAULT 0,
     constraint pk_kaoqin_class_situtation primary key(cid,sid),
     constraint fk_kaoqin_class_situtation_cid foreign key(cid) references kaoqin_course(cid),
     constraint fk_kaoqin_class_situtation_sid foreign key(sid) references kaoqin_student(sid)

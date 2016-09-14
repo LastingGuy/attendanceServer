@@ -81,7 +81,7 @@
                 location.href="<?php echo U('Teacher/Course/index');?>";
             }
             else if(msg=='3'){
-                location.href="<?php echo U('Home/Attendance/index');?>";
+                location.href="<?php echo U('Home/Course/index');?>";
             }else if(msg=='0'){
                 alert("您输入的密码或账号错误！");
             }

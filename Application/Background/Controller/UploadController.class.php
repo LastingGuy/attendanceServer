@@ -64,11 +64,15 @@ class UploadController extends Controller {
 
             //查看文件是否存在
             if(file_exists(C("SAVE_ROOT").'/'.$course_id.'/'.$filename)) {
-                //文件存在，删除数据库中数据
+                //文件存在，删除缺勤人数上
                 $xml = new \DOMDocument();
                 if($xml->load(C("SAVE_ROOT").'/'.$course_id.'/'.$filename)){
                     $root = $xml->documentElement;
                     $elm = $root->getElementsByTagName("stu");
+
+                    $model = M('Course');
+                    $model->where("cid=$course_id")->setDec("times");
+
                     $model = M("Absence");
                     foreach($elm as $node){
                         if($node->getElementsByTagName("check")->item(0)->nodeValue==0){
@@ -86,6 +90,8 @@ class UploadController extends Controller {
     private function handleNewXml($filepath,$filename)
     {
         $xml = new \DOMDocument();
+        $course_id = null;
+
         if($xml->load($filepath.'/'.$filename)) {
             $root = $xml->documentElement;
             $elm = $root->getElementsByTagName("courseid");
@@ -93,6 +99,12 @@ class UploadController extends Controller {
             {
                 $course_id = $v->nodeValue;
             }
+
+            //更新课程考勤次数
+            $model = M('Course');
+            $model->where("cid=$course_id")->setInc("times");
+
+            //增加缺勤情况
             $elm = $root->getElementsByTagName("stu");
             $model = D("Absence");
             foreach($elm as $node) {
@@ -106,5 +118,6 @@ class UploadController extends Controller {
                 }
             }
         }
+
     }
 }

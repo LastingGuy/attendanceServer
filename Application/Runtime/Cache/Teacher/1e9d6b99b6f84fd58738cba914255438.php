@@ -73,7 +73,9 @@
                             <th data-field="state" data-checkbox="true" >Item ID</th>
                             <th data-field="id" data-sortable="true">课程号</th>
                             <th data-field="name">课程名</th>
-                            <th data-field="condition">详 细</th>
+                            <th data-field="rate">出勤率</th>
+                            <th data-field="attendance">考勤情况</th>
+                            <th data-field="students">学生名单</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -81,7 +83,13 @@
                                 <td></td>
                                 <td><?php echo ($vo["cid"]); ?></td>
                                 <td><?php echo ($vo["cname"]); ?></td>
-                                <td><a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id=<?php echo ($vo["cid"]); ?>&course_name=<?php echo ($vo["cname"]); ?>">查 看</a></td>
+                                <td></td>
+                                <td>
+                                    <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id=<?php echo ($vo["cid"]); ?>&course_name=<?php echo ($vo["cname"]); ?>">查 看</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id=<?php echo ($vo["cid"]); ?>&course_name=<?php echo ($vo["cname"]); ?>">查 看</a>
+                                </td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                         </tbody>
                     </table>

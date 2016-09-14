@@ -14,9 +14,31 @@ class AttendanceController extends Controller {
         {
             header('Location:'.U("Home/Index/index"));
         }
+        $res_path = C("RES_PATH");
+        $this->assign("res_path",$res_path);
+            
+        $this->display();
+    }
 
+    public function courseQuery(){
+        if(!session('?admin'))
+        {
+            header('Location:'.U("Home/Index/index"));
+        }
+        $res_path = C("RES_PATH");
+        $this->assign("res_path",$res_path);
 
         $this->display();
     }
-    
+
+    public function countryQuery(){
+        if(!session('?admin'))
+        {
+            header('Location:'.U("Home/Index/index"));
+        }
+        $res_path = C("RES_PATH");
+        $this->assign("res_path",$res_path);
+
+        $this->display();
+    }
 }

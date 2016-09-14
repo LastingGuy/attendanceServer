@@ -73,7 +73,9 @@
                             <th data-field="state" data-checkbox="true" >Item ID</th>
                             <th data-field="id" data-sortable="true">课程号</th>
                             <th data-field="name">课程名</th>
-                            <th data-field="sex"  data-sortable="true">缺勤数</th>
+                            <th data-field="sex"  data-sortable="true">缺勤</th>
+                            <th data-field="sex"  data-sortable="true">出勤</th>
+                            <th data-field="sex"  data-sortable="true">出勤率</th>
                         </tr>
                         </thead>
                         <tbody>

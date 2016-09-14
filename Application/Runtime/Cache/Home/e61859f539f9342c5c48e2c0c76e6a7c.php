@@ -25,17 +25,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <!-- 头部 -->
             <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
-            <ul class="user-menu">
-                <li class="dropdown pull-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
+<ul class="user-menu">
+    <li class="dropdown pull-right">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+    </li>
+</ul>
         </div>
     </div><!-- /.container-fluid -->
 </nav>
@@ -46,14 +47,13 @@
             <input type="text" class="form-control" placeholder="Search">
         </div>
     </form>
+    <!--包括导航栏-->
     <ul class="nav menu">
-        <li><a href="../Attendance/index"><span class="glyphicon glyphicon-th"></span> 考勤管理</a></li>
-        <li><a href="../Class/index"><span class="glyphicon glyphicon-th"></span> 课程情况管理</a></li>
-        <li class="active"><a href="../Course/index"><span class="glyphicon glyphicon-list-alt"></span> 课程管理</a></li>
-        <li><a href="../Student/index"><span class="glyphicon glyphicon-pencil"></span> 学生管理</a></li>
-        <li><a href="../Teacher/index"><span class="glyphicon glyphicon-pencil"></span> 教师管理</a></li>
-        <li role="presentation" class="divider"></li>
-    </ul>
+    <li><a href="../Course/index"><span class="glyphicon glyphicon-list-alt"></span> 课程管理</a></li>
+    <li><a href="../Student/index"><span class="glyphicon glyphicon-pencil"></span> 学生管理</a></li>
+    <li><a href="../Teacher/index"><span class="glyphicon glyphicon-pencil"></span> 教师管理</a></li>
+    <li><a href="../Attendance/studentQuery"><span class="glyphicon glyphicon-pencil"></span> 出勤率查询</a></li>
+</ul>
 </div><!--/.sidebar-->
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -62,7 +62,7 @@
             <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
             <li class="active">课程管理</li>
         </ol>
-    </div><!--/.row-->3
+    </div><!--/.row-->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -90,10 +90,12 @@
         </div>
     </div>
 </div>
+</body>
 
 
 <script src="<?php echo ($res_path); ?>/js/jquery-1.11.1.min.js"></script>
 <script src="<?php echo ($res_path); ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo ($res_path); ?>/js/bootstrap-table.js"></script>
+<script src="<?php echo ($res_path); ?>/js/locale/bootstrap-table-zh-CN.js"></script>
 
 </html>
