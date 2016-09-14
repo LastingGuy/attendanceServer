@@ -88,8 +88,13 @@
                     </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <button type="button" class="btn btn-primary" onclick="queryStudent()"> 查 询 </button>
 
+=======
+                    <button type="button" class="btn btn-primary">查 询</button>
+                    <button type="button" class="btn btn-primary">全 部 查 询</button>
+>>>>>>> origin/master
 =======
                     <button type="button" class="btn btn-primary">查 询</button>
                     <button type="button" class="btn btn-primary">全 部 查 询</button>
@@ -101,6 +106,7 @@
                 <tr>
                     <th data-field="state" data-checkbox="true" >Item ID</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <th data-field="sid" data-sortable="true">学 号</th>
                     <th data-field="sname">姓 名</th>
                     <th data-field="cid">课程号</th>
@@ -110,11 +116,16 @@
                     <th data-field="absence">未 到</th>
                     <th data-field="rate">到课率</th>
 =======
+=======
+>>>>>>> origin/master
                     <th data-field="id" data-sortable="true">学 号</th>
                     <th data-field="name">姓 名</th>
                     <th data-field="teacher_name">课程号</th>
                     <th data-field="teacher_id">课程名</th>
                     <th data-field="attendance">到课率</th>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                 </tr>
                 </thead>
@@ -133,15 +144,21 @@
                     <label  class="col-lg-1 col-lg-offset-1 col-sm-3 control-label">学号</label>
                     <div class="col-lg-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="请输入学号"  id="sid2" name="sid2" >
                     </div>
                     <button type="button" class="btn btn-primary" onclick="queryAllStudent()"> 查 询 </button>
 =======
+=======
+>>>>>>> origin/master
                         <input type="text" class="form-control" placeholder="请输入学号"  id="sid2" name="sid" >
                     </div>
 
                     <button type="button" class="btn btn-primary">查 询</button>
                     <button type="button" class="btn btn-primary">全 部 查 询</button>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                 </form>
                 <table id="table2" data-toggle="table" data-url=""  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
@@ -149,12 +166,18 @@
                     <tr>
                         <th data-field="state" data-checkbox="true" >Item ID</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <th data-field="sid" data-sortable="true">学 号</th>
                         <th data-field="sname">姓 名</th>
                         <th data-field="times">应 到</th>
                         <th data-field="attendance">实 到</th>
                         <th data-field="absence">未 到</th>
                         <th data-field="rate">总到课率</th>
+=======
+                        <th data-field="id" data-sortable="true">学 号</th>
+                        <th data-field="name">姓 名</th>
+                        <th data-field="attendance">总到课率</th>
+>>>>>>> origin/master
 =======
                         <th data-field="id" data-sortable="true">学 号</th>
                         <th data-field="name">姓 名</th>
@@ -178,6 +201,7 @@
 <script src="<?php echo ($res_path); ?>/js/bootstrap-table.js"></script>
 <script src="<?php echo ($res_path); ?>/js/locale/bootstrap-table-zh-CN.js"></script>
 <script>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -213,6 +237,8 @@
         });
     }
 =======
+=======
+>>>>>>> origin/master
     var $remove = $('#remove');
     var $table = $('#table');
     $table.on('check.bs.table uncheck.bs.table ' +
@@ -229,6 +255,9 @@
         });
     }
 
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 
 </script>

@@ -80,16 +80,22 @@
                     <label  class="col-lg-1 col-lg-offset-1 col-sm-3 control-label">课程号</label>
                     <div class="col-lg-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="请输入课程号"  id="cid" name="cid" >
                     </div>
 
                     <button type="button" class="btn btn-primary" onclick="courseQuery()">查 询</button>
 =======
+=======
+>>>>>>> origin/master
                         <input type="text" class="form-control" placeholder="请输入课程号"  id="sid" name="sid" >
                     </div>
 
                     <button type="button" class="btn btn-primary">查 询</button>
                     <button type="button" class="btn btn-primary">全 部 查 询</button>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                 </div>
             </form>
@@ -98,17 +104,23 @@
                 <tr>
                     <th data-field="state" data-checkbox="true" >Item ID</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <th data-field="cid" data-sortable="true">课程号</th>
                     <th data-field="cname">课程名</th>
                     <th data-field="tid">教师工号</th>
                     <th data-field="tname">教师名</th>
                     <th data-field="rate">该课到课率</th>
 =======
+=======
+>>>>>>> origin/master
                     <th data-field="id" data-sortable="true">课程号</th>
                     <th data-field="name">课程名</th>
                     <th data-field="teacher_name">教师工号</th>
                     <th data-field="teacher_id">教师名</th>
                     <th data-field="attendance">该课到课率</th>
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
                 </tr>
                 </thead>
@@ -145,6 +157,7 @@
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     function courseQuery(){
         var cour_id = $('#cid').val();
 
@@ -158,6 +171,8 @@
                 $('#table').bootstrapTable('load',data);
         });
     }
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 
