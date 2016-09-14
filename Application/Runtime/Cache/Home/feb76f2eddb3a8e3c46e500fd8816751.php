@@ -79,7 +79,11 @@
                 <div class="form-group">
                     <label  class="col-lg-1 col-lg-offset-1 col-sm-3 control-label">国 家</label>
                     <div class="col-lg-2">
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="请输入国家"  id="tid" name="tid" >
+=======
+                        <input type="text" class="form-control" placeholder="请输入国家"  id="sid" name="sid" >
+>>>>>>> origin/master
                     </div>
 
                     <button type="button" class="btn btn-primary" >查 询</button>
@@ -93,6 +97,12 @@
                     <th data-field="state" data-checkbox="true" >Item ID</th>
                     <th data-field="id" data-sortable="true">学 号</th>
                     <th data-field="name">姓 名</th>
+<<<<<<< HEAD
+=======
+                    <th data-field="teacher_name">课程号</th>
+                    <th data-field="teacher_id">课程名</th>
+                    <th data-field="attendance">该课到课率</th>
+>>>>>>> origin/master
                     <th data-field="attendance">总到课率</th>
                 </tr>
                 </thead>
@@ -128,6 +138,7 @@
         });
     }
 
+<<<<<<< HEAD
     function countryQuery(){
         var tea_id = $('#tid').val();
 
@@ -140,6 +151,9 @@
                 $('#table').bootstrapTable('load',data);
         });
     }
+=======
+
+>>>>>>> origin/master
 </script>
 </body>
 </html>

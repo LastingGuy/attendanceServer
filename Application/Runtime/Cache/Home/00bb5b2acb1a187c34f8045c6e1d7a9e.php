@@ -79,21 +79,37 @@
                 <div class="form-group">
                     <label  class="col-lg-1 col-lg-offset-1 col-sm-3 control-label">课程号</label>
                     <div class="col-lg-2">
+<<<<<<< HEAD
                         <input type="text" class="form-control" placeholder="请输入课程号"  id="cid" name="cid" >
                     </div>
 
                     <button type="button" class="btn btn-primary" onclick="courseQuery()">查 询</button>
+=======
+                        <input type="text" class="form-control" placeholder="请输入课程号"  id="sid" name="sid" >
+                    </div>
+
+                    <button type="button" class="btn btn-primary">查 询</button>
+                    <button type="button" class="btn btn-primary">全 部 查 询</button>
+>>>>>>> origin/master
                 </div>
             </form>
             <table id="table" data-toggle="table" data-url=""  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
                 <thead>
                 <tr>
                     <th data-field="state" data-checkbox="true" >Item ID</th>
+<<<<<<< HEAD
                     <th data-field="cid" data-sortable="true">课程号</th>
                     <th data-field="cname">课程名</th>
                     <th data-field="tid">教师工号</th>
                     <th data-field="tname">教师名</th>
                     <th data-field="rate">该课到课率</th>
+=======
+                    <th data-field="id" data-sortable="true">课程号</th>
+                    <th data-field="name">课程名</th>
+                    <th data-field="teacher_name">教师工号</th>
+                    <th data-field="teacher_id">教师名</th>
+                    <th data-field="attendance">该课到课率</th>
+>>>>>>> origin/master
                 </tr>
                 </thead>
                 <tbody id="tbody">
@@ -128,6 +144,7 @@
         });
     }
 
+<<<<<<< HEAD
     function courseQuery(){
         var cour_id = $('#cid').val();
 
@@ -141,6 +158,8 @@
                 $('#table').bootstrapTable('load',data);
         });
     }
+=======
+>>>>>>> origin/master
 
 </script>
 </body>
