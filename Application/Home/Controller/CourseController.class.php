@@ -208,4 +208,117 @@ class CourseController extends Controller
 
     }
 
+    //获得学生名单
+    public function studentsList()
+    {
+        //检测是否登陆和是否有post提交
+        if(!session("?admin"))
+        {
+            $this->redirect('Index/index');
+        }
+
+        //获取课程id
+        $cid = I('get.cid');
+        // $cid='1001';
+
+        //连接并查找数据库
+        $model = D('ClassSitutation');
+        $list = $model->relation(true)->where("cid='$cid'")->select();
+        
+        $this->assign("cid",$cid);
+        $this->assign("list",$list);
+        $this->display();
+    }
+
+    //返回学生信息
+    public function getstuinfo()
+    {
+        //检测是否登陆和是否有post提交
+        if(!IS_POST||!session('?admin'))
+        {
+            return;
+        }
+        else
+        {
+            //获得sid
+            $sid = I("post.sid");
+            
+            //连接并查找数据库
+            $model = D('student');
+            $stu = $model->find($sid);
+
+            $this->ajaxReturn($stu);
+        }
+    }
+
+    //为课程添加学生
+    public function addStudent()
+    {
+        //检测是否登陆和是否有post提交
+        if(!session('?admin'))
+        {
+            $this->ajaxReturn('fail');
+        }
+        else
+        {
+            //获得sid
+            $sid = I("post.sid");
+            $cid = I("post.cid");
+
+            // $cid='1001';
+            // $sid='1003';
+
+            $stu = D('student');
+            if(null==($stu->find($sid)))
+            {
+                $this->ajaxReturn("fail");
+            }
+            $course = D("course");
+            if(null==($course->find($cid)))
+            {
+                $this->ajaxReturn("fail");
+            }
+
+            //连接并查找数据库
+            $model = D('ClassSitutation');
+            $model->sid = $sid;
+            $model->cid = $cid;
+            $model->absence_number=0;
+            $r = $model->where("cid=$cid and sid=$sid")->find();
+            //var_dump($r);
+            if(isset($r))       //在数据库中已存在此选课信息
+            {  
+                $this->ajaxReturn("fail");
+            }
+            else
+            {
+                $model->add();
+                $model = D('ClassSitutation');
+                $list = $model->relation(true)->where("cid=$cid and sid=$sid")->select();
+                $this->ajaxReturn($list);
+            }
+                
+        }
+    }
+
+    //删除学生
+    public function deleteRelation()
+    {
+        if(!IS_POST||!session('?admin'))
+        {
+            $this->ajaxReturn("fail");
+        }
+
+        $ids = I("post.ids");
+        $cid = I("post.cid");
+
+        $model = M("ClassSitutation");
+        $result = Array();
+        foreach ($ids as $value) 
+        {
+            $result[$value] = $model->where("cid=$cid and sid=$value")->delete();
+        }
+
+        $this->ajaxReturn('success');
+    }
 }

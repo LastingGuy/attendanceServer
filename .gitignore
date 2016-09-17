@@ -1,2 +1,4 @@
-.idea/workspace.xml
-Application/Runtime/Cache/Home/9b5f16b5e152a35cbbf967fa7e60ae32.php
+Application/Runtime/
+Runtime/
+.vscode/.browse.VC.db
+.vscode/.browse.VC.db-wal
