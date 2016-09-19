@@ -7,6 +7,7 @@
  */
 namespace Teacher\Controller;
 use Think\Controller;
+use Common\Common;
 class CourseController extends Controller {
     public function index()
     {
@@ -19,8 +20,14 @@ class CourseController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
 
+        $list = array();
         $model = M('Course');
-        $list = $model->where("tid='$tea_id'")->select();
+        $data = $model->where("tid='$tea_id'")->getField("cid",true);
+
+        foreach ($data as $id){
+            $course = Common\AttendanceRateUtil::queryCourse($id);
+            array_push($list,$course[0]);
+        }
         $this->assign("list",$list);
         $this->display();
     }
@@ -49,6 +56,35 @@ class CourseController extends Controller {
             }
         }
         $this->assign("list", $filelist);
+        $this->display();
+    }
+
+    public function studentsList()
+    {
+        //检测是否登陆和是否有post提交
+        if(!session("?teacher"))
+        {
+            $this->redirect('Index/index');
+        }
+
+        //获取课程id
+        $cid = I('get.course_id');
+        $cname = I('get.course_name');
+
+        // $cid='1001';
+
+        //连接并查找数据库
+        $model = D('ClassSitutation');
+        $list = $model->relation(true)->where("cid='$cid'")->select();
+
+        foreach ($list as $key=>$item) {
+            $stu = Common\AttendanceRateUtil::queryStudent($item['sid'],$cid);
+            $list[$key]['attendance'] = $stu[0];
+        }
+   
+        $this->assign("cid",$cid);
+        $this->assign("cname",$cname);
+        $this->assign("list",$list);
         $this->display();
     }
 

@@ -153,7 +153,7 @@ class CourseController extends Controller
             }
         }
         $this->assign("list", $filelist);
-        $this->display();
+        $this->display("courseCondition");
     }
 
     //考勤显示
