@@ -151,6 +151,7 @@
             if(data==null)
                 $('#table').bootstrapTable('removeAll');
             else{
+                alert(data);
                 for(var one in data){
                     one['rate'] = one['rate'] + '%';
                 }
