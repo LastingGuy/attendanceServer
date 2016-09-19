@@ -154,6 +154,7 @@
                 alert(data);
                 for(var one in data){
                     one['rate'] = one['rate'] + '%';
+                    alert(one['rate']);
                 }
                 $('#table').bootstrapTable('load',data);
             }
