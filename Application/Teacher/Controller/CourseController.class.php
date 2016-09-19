@@ -40,7 +40,8 @@ class CourseController extends Controller {
         }
 
         $course_id = I('get.course_id');
-        $course_name = I('get.course_name');
+        $model = M("Coures");
+        $course_name = $model->where("cid=$course_id")->getField("cnames");
 
         $res_path = C("RES_PATH");
         $this->assign("res_path", $res_path);
@@ -69,7 +70,8 @@ class CourseController extends Controller {
 
         //获取课程id
         $cid = I('get.course_id');
-        $cname = I('get.course_name');
+        $model = M("Coures");
+        $cname = $model->where("cid=$cid")->getField("cnames");
 
         // $cid='1001';
 
@@ -99,7 +101,8 @@ class CourseController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path", $res_path);
         $course_id = I('get.course_id');
-        $course_name = I("get.course_name");
+        $model = M("Coures");
+        $course_name = $model->where("cid=$course_id")->getField("cnames");
         $date = I('get.date');
 
         $filename = $date . ".xml";
