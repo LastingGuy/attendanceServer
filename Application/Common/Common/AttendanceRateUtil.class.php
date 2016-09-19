@@ -67,8 +67,7 @@ class AttendanceRateUtil{
                 $data =  $model->where("cid=".$value['cid'])->find();
                 $return_data[$key]['cname'] = $data['cname'];
                 $return_data[$key]['times'] = $data['times'];
-                var_dump($return_data);
-                $return_data[$key]['attendance'] = $return_data[$key]['time']-$return_data[$key]['absence'];
+                $return_data[$key]['attendance'] = $return_data[$key]['times']-$return_data[$key]['absence'];
                 if($return_data[$key]['attendance']!=0)
                     $return_data[$key]['rate'] = number_format($return_data[$key]['attendance'] / $return_data[$key]['times'] * 100,2);
                 else
