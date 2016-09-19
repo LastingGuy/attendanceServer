@@ -21,7 +21,7 @@ class InformationController extends Controller
         $this->assign("res_path",$res_path);
 
         $data = Common\AttendanceRateUtil::queryStudent($stu_id,null);
-        $this->assign("attendanceRate",$data[0]);
+        $this->assign("attendanceRate",$data[0]['rate']);
 
 
         $model = M("Student");

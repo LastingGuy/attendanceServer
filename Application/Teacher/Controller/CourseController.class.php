@@ -56,7 +56,7 @@ class CourseController extends Controller {
             }
         }
         $this->assign("list", $filelist);
-        $this->display();
+        $this->display("courseCondition");
     }
 
     public function studentsList()

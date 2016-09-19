@@ -154,7 +154,7 @@ class AttendanceRateUtil{
             $model = M("course");
             $times = 0;
             foreach ($data as $key=>$value){
-                $each = $model->where("cid=$key")->getField("cname,times");
+                $each = $model->where("cid=$key")->getField("times",true);
                 $times = $times + $each[0];
             }
             $return_data[0]['times'] = $times;
@@ -168,7 +168,6 @@ class AttendanceRateUtil{
 
             return $return_data;
         }
-
     }
 
     public static function queryCourse($cid){
@@ -257,7 +256,7 @@ class AttendanceRateUtil{
             //计算实到数和出勤率
             $attendance = $times - $absence;
             if($attendance!=0)
-                $return_data[0]['rate'] = number_format($attendance / $return_data[0]['times'] * 100,2);
+                $return_data[0]['rate'] = number_format($attendance / $times * 100,2);
             else
                 $return_data[0]['rate'] = 0;
 
