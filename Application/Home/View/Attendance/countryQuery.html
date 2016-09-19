@@ -121,9 +121,11 @@
         },function(data,status){
             if(data==null)
                 $('#table').bootstrapTable('removeAll');
-            else {
+            else{
                 for(var one in data){
-                    one['rate'] = one['rate'] + '%';
+                    if(data.hasOwnProperty(one)){
+                        data[one].rate = data[one].rate + '%';
+                    }
                 }
                 $('#table').bootstrapTable('load',data);
             }

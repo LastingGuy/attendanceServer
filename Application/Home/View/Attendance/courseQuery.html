@@ -124,7 +124,9 @@
                 $('#table').bootstrapTable('removeAll');
             else{
                 for(var one in data){
-                    one['rate'] = one['rate'] + '%';
+                    if(data.hasOwnProperty(one)){
+                        data[one].rate = data[one].rate + '%';
+                    }
                 }
                 $('#table').bootstrapTable('load',data);
             }
