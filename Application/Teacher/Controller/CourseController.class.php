@@ -40,7 +40,7 @@ class CourseController extends Controller {
         }
 
         $course_id = I('get.course_id');
-        $model = M("Coures");
+        $model = M("Course");
         $course_name = $model->where("cid=$course_id")->getField("cname");
 
         $res_path = C("RES_PATH");
@@ -70,7 +70,7 @@ class CourseController extends Controller {
 
         //获取课程id
         $cid = I('get.course_id');
-        $model = M("Coures");
+        $model = M("Course");
         $cname = $model->where("cid=$cid")->getField("cname");
 
         // $cid='1001';
@@ -101,7 +101,7 @@ class CourseController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path", $res_path);
         $course_id = I('get.course_id');
-        $model = M("Coures");
+        $model = M("Course");
         $course_name = $model->where("cid=$course_id")->getField("cname");
         $date = I('get.date');
 
