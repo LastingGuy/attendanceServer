@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lumino - Dashboard</title>
+
+    <link href="__ROOT__/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ROOT__/Public/css/bootstrap-table.css" rel="stylesheet">
+    <link href="__ROOT__/Public/css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="{$res_path}/js/html5shiv.js"></script>
+    <script src="{$res_path}//respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 头部 -->
+            <include file="Public/header" />
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="col-lg-offset-1 col-lg-10  main ">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">学生名单</li>
+        </ol>
+    </div><!--/.row-->
+    <div class="row">
+        <div class="col">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>{$name}({$sid})</strong>  选 课 情 况</div>
+                <div class="panel-body">
+
+                    <table id="table"  data-toggle="table" data-url=""  data-show-refresh="true"  data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+                        <thead align="center">
+                        <tr>
+                            <th data-field="state" data-checkbox="true" >Item ID</th>
+                            <th data-field="id" data-sortable="true">课程号</th>
+                            <th data-field="name">课程名</th>
+                            <th data-field="sex">授课教师</th>
+                            <th data-field="college">教师工号</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="list" id="vo">
+                        <tr>
+                            <td></td>
+                            <td>{$vo.cid}</td>
+                            <td>{$vo.cname}</td>
+                            <td>{$vo.tname}</td>
+                            <td>{$vo.tid}</td>
+                            <!--<td>{$vo.student.sclass}</td>                     -->
+                        </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="__ROOT__/Public/js/jquery-1.11.1.min.js"></script>
+<script src="__ROOT__/Public/js/bootstrap.min.js"></script>
+<script src="__ROOT__/Public/js/bootstrap-table.js"></script>
+<script src="__ROOT__/Public/js/locale/bootstrap-table-zh-CN.js"></script>
+</body>
+</html>
