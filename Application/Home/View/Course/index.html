@@ -293,6 +293,7 @@
         $.get("../Course/findTeachers",
         null,
         function(data,status){
+            $('#teacher').remove();
             for(var id in data)
                 $('#teacher').append("<option value="+data[id]['tid']+">"+data[id]['tid']+"  "+data[id]['tname']+"</option>");
         });

@@ -181,22 +181,22 @@ class CourseController extends Controller
         $course_data = array();
 
         $root = $xml->documentElement;
-        $course_data['course_id'] = $root->getElementsByTagName("courseid")[0]->nodeValue;
-        $course_data['date'] = $root->getElementsByTagName("date")[0]->nodeValue;
-        $course_data['begin_time'] = $root->getElementsByTagName("ts")[0]->nodeValue;
-        $course_data['end_time'] = $root->getElementsByTagName("te")[0]->nodeValue;
+        $course_data['course_id'] = $root->getElementsByTagName("courseid")->item[0]->nodeValue;
+        $course_data['date'] = $root->getElementsByTagName("date")->item[0]->nodeValue;
+        $course_data['begin_time'] = $root->getElementsByTagName("ts")->item[0]->nodeValue;
+        $course_data['end_time'] = $root->getElementsByTagName("te")->item[0]->nodeValue;
 
         $students = $root->getElementsByTagName("stu");
         foreach ($students as $stu) {
             $data = array();
-            $data['id'] = $stu->getElementsByTagName("id")[0]->nodeValue;
-            $data['name'] = $stu->getElementsByTagName("name")[0]->nodeValue;
-            $data['college'] = $stu->getElementsByTagName("college")[0]->nodeValue;
-            $data['major'] = $stu->getElementsByTagName("major")[0]->nodeValue;
-            $data['class'] = $stu->getElementsByTagName("sclass")[0]->nodeValue;
-            $data['sex'] = $stu->getElementsByTagName("sex")[0]->nodeValue;
-            $data['check'] = $stu->getElementsByTagName("check")[0]->nodeValue;
-            $data['arrive_time'] = $stu->getElementsByTagName("arrive_time")[0]->nodeValue;
+            $data['id'] = $stu->getElementsByTagName("id")->item[0]->nodeValue;
+            $data['name'] = $stu->getElementsByTagName("name")->item[0]->nodeValue;
+            $data['college'] = $stu->getElementsByTagName("college")->item[0]->nodeValue;
+            $data['major'] = $stu->getElementsByTagName("major")->item[0]->nodeValue;
+            $data['class'] = $stu->getElementsByTagName("sclass")->item[0]->nodeValue;
+            $data['sex'] = $stu->getElementsByTagName("sex")->item[0]->nodeValue;
+            $data['check'] = $stu->getElementsByTagName("check")->item[0]->nodeValue;
+            $data['arrive_time'] = $stu->getElementsByTagName("arrive_time")->item[0]->nodeValue;
             array_push($stu_data, $data);
         }
 
