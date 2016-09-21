@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Dashboard</title>
+    <title>考勤系统 - 学生管理</title>
 
     <link href="{$res_path}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{$res_path}/css/bootstrap-table.css" rel="stylesheet">
@@ -381,7 +381,7 @@
             // push or splice the selections if you want to save all data selections
         });
 
-
+        $("#student_li").addClass("active");
         function getIdSelections() {
             return $.map($table.bootstrapTable('getSelections'), function (row) {
                 return row.id
