@@ -117,7 +117,7 @@
                         <th data-field="times">应 到</th>
                         <th data-field="attendance">实 到</th>
                         <th data-field="absence">未 到</th>
-                        <th data-field="rate">总到课率</th>
+                        <th data-field="rate">总到课率(%)</th>
                     </tr>
                     </thead>
                     <tbody id="tbody2">
@@ -150,8 +150,15 @@
             $('#sid2').val("");
             if(data==null)
                 $('#table').bootstrapTable('removeAll');
-            else
+            else{
+                for(var one in data){
+                    if(data.hasOwnProperty(one)){
+                        data[one].rate = data[one].rate + '%';
+                    }
+                }
                 $('#table').bootstrapTable('load',data);
+            }
+
         });
     }
 
@@ -165,8 +172,14 @@
             $('#cid').val("");
             if(data==null)
                 $('#table2').bootstrapTable('removeAll');
-            else
-                $('#table2').bootstrapTable('load',data);
+            else{
+                for(var one in data){
+                    if(data.hasOwnProperty(one)){
+                        data[one].rate = data[one].rate + '%';
+                    }
+                }
+                $('#table').bootstrapTable('load',data);
+            }
         });
     }
 
