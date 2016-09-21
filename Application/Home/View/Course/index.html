@@ -234,6 +234,8 @@
         // push or splice the selections if you want to save all data selections
     });
 
+    $("#course_li").addClass("active");
+
     function getIdSelections() {
         return $.map($table.bootstrapTable('getSelections'), function (row) {
             return row.id
@@ -349,6 +351,8 @@
     {
          window.open("../Course/studentslist?cid="+cid);
     }
+
+
 </script>
 
 </body>
