@@ -106,6 +106,7 @@
         selections = getIdSelections();
         // push or splice the selections if you want to save all data selections
     });
+    $("#attendance_li").addClass("active");
 
     function getIdSelections() {
         return $.map($table.bootstrapTable('getSelections'), function (row) {
