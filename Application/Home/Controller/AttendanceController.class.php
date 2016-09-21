@@ -7,7 +7,6 @@
  */
 namespace Home\Controller;
 use Think\Controller;
-use Think\Exception;
 class AttendanceController extends Controller {
     public function studentQuery(){
         if(!session('?admin'))
@@ -17,7 +16,7 @@ class AttendanceController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
             
-        $this->display();
+        $this->display("studentQuery");
     }
 
     public function courseQuery(){
@@ -28,7 +27,7 @@ class AttendanceController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
 
-        $this->display();
+        $this->display("courseQuery");
     }
 
     public function countryQuery(){
@@ -39,6 +38,6 @@ class AttendanceController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
 
-        $this->display();
+        $this->display("countryQuery");
     }
 }

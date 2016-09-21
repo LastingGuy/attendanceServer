@@ -7,6 +7,7 @@
  */
 namespace Student\Controller;
 use Think\Controller;
+use Common\Common;
 class InformationController extends Controller
 {
     public function index(){
@@ -18,6 +19,10 @@ class InformationController extends Controller
         $stu_id = session("student");
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
+
+        $data = Common\AttendanceRateUtil::queryStudent($stu_id,null);
+        $this->assign("attendanceRate",$data[0]['rate']);
+
 
         $model = M("Student");
         $data = $model->where("sid = '$stu_id'")->find();

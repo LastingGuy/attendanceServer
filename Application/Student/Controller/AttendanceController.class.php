@@ -7,6 +7,7 @@
  */
 namespace Student\Controller;
 use Think\Controller;
+use Common\Common;
 class AttendanceController extends Controller{
     public function index()
     {
@@ -19,7 +20,12 @@ class AttendanceController extends Controller{
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
         $model = D("ClassSitutation");
-        $list = $model->relation(true)->where("sid='$stu_id'")->select();
+        $data = $model->where("sid='$stu_id'")->getField('cid',true);
+        $list = array();
+        foreach($data as $course){
+            $stu = Common\AttendanceRateUtil::queryStudent($stu_id,$course);
+            array_push($list,$stu[0]);
+        }
         $this->assign("list",$list);
         $this->display();
     }
