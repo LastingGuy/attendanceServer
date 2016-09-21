@@ -397,14 +397,15 @@
                 for(var o in data)
                 {
                     if(data[o]==1)
+                    {
                         str += "编号："+o+" 删除成功! \n";
+                    }
                     else
                         str += "编号："+o+" 删除失败！\n";
                 }
                 alert(str)
-            });
-            $remove.prop('disabled', true);
-            window.location.reload();
+                window.location.reload();
+            });           
         });
 
         //使用Ajax,增加学生
