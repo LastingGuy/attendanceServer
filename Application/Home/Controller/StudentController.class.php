@@ -38,8 +38,9 @@ class StudentController extends Controller
         $list = $model->where("Student.sid=$sid")->select();
         $student = M("student");
         $stu = $student->find($sid);
+        // $this->ajaxReturn($stu);
         $this->assign('list',$list);
-        $this->assign('name',$stu[0]['sname']);
+        $this->assign('name',$stu['sname']);
         $this->assign('sid',$sid);
         $this->display();
     }

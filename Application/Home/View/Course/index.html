@@ -254,10 +254,9 @@
                     str += "编号："+o+" 删除失败！\n";
             }
             alert(str);
+            window.location.reload();
         });
 
-        $remove.prop('disabled', true);
-        window.location.reload();
     });
 
     //使用Ajax,增加课程
