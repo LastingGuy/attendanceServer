@@ -75,10 +75,8 @@ class UploadController extends Controller {
 
                     $model = M("Absence");
                     foreach($elm as $node){
-                        if($node->getElementsByTagName("check")->item(0)->nodeValue==0){
-                            $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
-                            $reuslt = $model->where("sid='$stu_id' and cid='$course_id'")->delete();
-                        }
+                        $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
+                        $model->where("sid='$stu_id' and cid='$course_id'")->delete();
                     }
                 }
             }
@@ -106,16 +104,16 @@ class UploadController extends Controller {
 
             //增加缺勤情况
             $elm = $root->getElementsByTagName("stu");
-            $model = D("Absence");
+            $model = D("Attendance");
             foreach($elm as $node) {
-                if($node->getElementsByTagName("check")->item(0)->nodeValue==0) {
-                    $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
-                    $data['cid'] = $course_id;
-                    $data['sid'] = $stu_id;
-                    $data['date'] = $filename;
-                    //$this->success($course_id." ".$stu_id." ".$filename);
-                    $model->add($data);
-                }
+                $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
+                $data['cid'] = $course_id;
+                $data['sid'] = $stu_id;
+                $data['date'] = $filename;
+                $data['checkin'] = $node->getElementsByTagName("check")->item(0)->nodeValue;
+                //$this->success($course_id." ".$stu_id." ".$filename);
+                $model->add($data);
+
             }
         }
 
