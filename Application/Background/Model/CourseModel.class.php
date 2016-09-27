@@ -19,6 +19,12 @@ class CourseModel extends RelationModel{
             'foreign_key' => 'cid',
             'relation_table' => 'kaoqin_Class_Situtation',
             'relation_foreign_key' => 'sid'
+        ),
+        'Teacher' =>array(
+            'mapping_type' => self::BELONGS_TO,
+            'class_name'  => 'Teacher',
+            'mapping_name' => 'teacher',
+            'foreign_key' => 'tid'
         )
     );
 }
