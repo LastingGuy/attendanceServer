@@ -40,22 +40,28 @@ class CourseController extends Controller
     public function getCourse(){
         $offset = I("get.offset");
         $limit = I("get.limit");
+        $search = I("get.search");
+        if($search!=""){
+            $model = D("Course");
+            $count = $model->count();
+            $list = $model->order("cid")->limit($offset,$limit)->relation(true)->select();
+            $return_data = array();
+            $return_data['total'] = $count;
+            $return_data['rows'] = $list;
+            $this->ajaxReturn($return_data);
+        }
+        else{
+            $model = D("Course");
+            $count = $model->count();
+            $list = $model->order("cid")->limit($offset,$limit)->where("cid=$search")->relation(true)->select();
+            $return_data = array();
+            $return_data['total'] = $count;
+            $return_data['rows'] = $list;
+            $this->ajaxReturn($return_data);
+        }
 
-        $model = D("Course");
-        $count = $model->count();
-        $list = $model->order("cid")->limit($offset,$limit)->relation(true)->select();
-        $return_data = array();
-        $return_data['total'] = $count;
-        $return_data['rows'] = $list;
-        $this->ajaxReturn($return_data);
     }
 
-    public function search(){
-        $text = I("get.text");
-        $model = D("Course");
-        $list = $model->order("cid")->where("cid=$text")->relation(true)->select();
-        $this->ajaxReturn($list);
-    }
 
     public function add()
     {
