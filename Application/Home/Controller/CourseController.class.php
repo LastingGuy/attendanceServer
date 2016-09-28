@@ -41,7 +41,7 @@ class CourseController extends Controller
         $offset = I("get.offset");
         $limit = I("get.limit");
 
-        $model = M("Course");
+        $model = D("Course");
         $count = $model->count();
         $list = $model->order("cid")->limit($offset*$limit,$limit)->relation(true)->select();
         $return_data = array();
