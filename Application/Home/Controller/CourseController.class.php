@@ -41,8 +41,8 @@ class CourseController extends Controller
         $offset = I("get.offset");
         $limit = I("get.limit");
         $search = I("get.search");
+        var_dump($search);
         if($search==""){
-            var_dump($search);
             $model = D("Course");
             $count = $model->count();
             $list = $model->order("cid")->limit($offset,$limit)->relation(true)->select();
@@ -52,7 +52,6 @@ class CourseController extends Controller
             $this->ajaxReturn($return_data);
         }
         else{
-            var_dump($search);
             $model = D("Course");
             $count = $model->count();
             $list = $model->where("cid=$search")->order("cid")->limit($offset,$limit)->relation(true)->select();
