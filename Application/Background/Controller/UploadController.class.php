@@ -12,7 +12,7 @@ class UploadController extends Controller {
     public function upload(){
         if(!session('?teacher'))
         {
-            $this->ajaxReturn("error");
+            $this->ajaxReturn("error1");
             return ;
         }
 
@@ -25,7 +25,7 @@ class UploadController extends Controller {
 
         $info = $upload->upload();
         if(!$info){ //上传错误提示错误信息
-            $this->ajaxReturn('error');
+            $this->ajaxReturn('error2');
             
         }else{ //上传成功
            //$this->success('上传成功！');
