@@ -41,7 +41,8 @@ class CourseController extends Controller
         $offset = I("get.offset");
         $limit = I("get.limit");
         $search = I("get.search");
-        var_dump($search);
+        echo $limit;
+        echo $search;
         if($search==""){
             $model = D("Course");
             $count = $model->count();
