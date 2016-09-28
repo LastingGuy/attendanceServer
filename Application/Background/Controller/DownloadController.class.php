@@ -38,7 +38,7 @@ class DownloadController extends Controller{
 
             $teacherid =  $xml->createElement("teacherid");
             $teacherid->nodeValue = $data['teacher']['tid'];
-
+            
             $nrofstu =  $xml->createElement("nrofstu");
             $nrofstu->nodeValue = $model1->where("cid='".$data['cid']."'")->count('sid');
 

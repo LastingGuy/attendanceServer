@@ -9,6 +9,7 @@ namespace Home\Controller;
 use Think\Controller;
 class StudentController extends Controller
 {
+    //主页
     public function index()
     {
         if(!session('?admin'))
@@ -24,6 +25,27 @@ class StudentController extends Controller
         $this->display();
     }
 
+    //学生选课课表
+    public function courseslist()
+    {
+        if(!IS_POST||!session('?admin'))
+        {
+            header('Location:'.U("Home/Index/index"));
+        }
+
+        $sid = I("post.sid");
+        $model = D("CourseList");
+        $list = $model->where("Student.sid=$sid")->select();
+        $student = M("student");
+        $stu = $student->find($sid);
+        // $this->ajaxReturn($stu);
+        $this->assign('list',$list);
+        $this->assign('name',$stu['sname']);
+        $this->assign('sid',$sid);
+        $this->display();
+    }
+
+    //添加学生
     public function add()
     {
         if(!session('?admin'))
@@ -72,6 +94,7 @@ class StudentController extends Controller
 
     }
 
+    //删除学生
     public function delete()
     {
         if(!session('?admin'))

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Dashboard</title>
+    <title>考勤系统 - 学生管理</title>
 
     <link href="{$res_path}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{$res_path}/css/bootstrap-table.css" rel="stylesheet">
@@ -79,6 +79,7 @@
                                 <th data-field="mac" >Mac地址</th>
                                 <th data-field="password" >密 码</th>
                                 <th data-field="edit">编 辑</th>
+                                <th data-field="courselist">查 看</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -100,8 +101,14 @@
                                 <td>{$vo.stel}</td>
                                 <td>{$vo.smac}</td>
                                 <td>{$vo.spassword}</td>
-                                <td><button class="btn btn-primary btn-xs" data-toggle="modal"
-                                            data-target="#changeModal" onclick="edit_before({$vo.sid});">编 辑</button></td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                            data-target="#changeModal" onclick="edit_before({$vo.sid});">编 辑</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                             onclick="courselist({$vo.sid});">课 程</button>
+                                </td>
                             </tr>
                             </volist>
                             </tbody>
@@ -374,7 +381,7 @@
             // push or splice the selections if you want to save all data selections
         });
 
-
+        $("#student_li").addClass("active");
         function getIdSelections() {
             return $.map($table.bootstrapTable('getSelections'), function (row) {
                 return row.id
@@ -390,14 +397,15 @@
                 for(var o in data)
                 {
                     if(data[o]==1)
+                    {
                         str += "编号："+o+" 删除成功! \n";
+                    }
                     else
                         str += "编号："+o+" 删除失败！\n";
                 }
                 alert(str)
-            });
-            $remove.prop('disabled', true);
-            window.location.reload();
+                window.location.reload();
+            });           
         });
 
         //使用Ajax,增加学生
@@ -498,6 +506,22 @@
             });
         }
 
+        function courselist(sid)
+        {
+            var temp_form = document.createElement("form");  
+            temp_form .action = 'courseslist';  
+            temp_form .target = "_blank";  
+            temp_form .method = "post";  
+            temp_form .style.display = "none";   
+
+            var opt = document.createElement("textarea");  
+            opt.name = 'sid';  
+            opt.value = sid;  
+            temp_form .appendChild(opt);  
+
+            document.body.appendChild(temp_form);  
+            temp_form .submit();  
+        }
     </script>
 </body>
 </html>

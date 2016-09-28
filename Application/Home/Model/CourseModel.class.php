@@ -9,7 +9,7 @@ namespace Home\Model;
 use Think\Model\RelationModel;
 class CourseModel extends RelationModel{
     protected $pk  = 'cid';
-
+    protected $fields = array("cid","cname","term","tid");
     protected $_link = array(
         'Teacher' =>array(
             'mapping_type' => self::BELONGS_TO,

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Dashboard</title>
+    <title>考勤系统 - 出勤率查询</title>
 
     <link href="{$res_path}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{$res_path}/css/datepicker3.css" rel="stylesheet">
@@ -117,7 +117,7 @@
                         <th data-field="times">应 到</th>
                         <th data-field="attendance">实 到</th>
                         <th data-field="absence">未 到</th>
-                        <th data-field="rate">总到课率</th>
+                        <th data-field="rate">总到课率(%)</th>
                     </tr>
                     </thead>
                     <tbody id="tbody2">
@@ -138,7 +138,7 @@
 <script>
 
 
-
+    $("#attendance_li").addClass("active");
     function queryStudent(){
         var stu_id = $('#sid').val();
         var cour_id = $('#cid').val();
@@ -150,8 +150,15 @@
             $('#sid2').val("");
             if(data==null)
                 $('#table').bootstrapTable('removeAll');
-            else
+            else{
+                for(var one in data){
+                    if(data.hasOwnProperty(one)){
+                        data[one].rate = data[one].rate + '%';
+                    }
+                }
                 $('#table').bootstrapTable('load',data);
+            }
+
         });
     }
 
@@ -165,8 +172,14 @@
             $('#cid').val("");
             if(data==null)
                 $('#table2').bootstrapTable('removeAll');
-            else
+            else{
+                for(var one in data){
+                    if(data.hasOwnProperty(one)){
+                        data[one].rate = data[one].rate + '%';
+                    }
+                }
                 $('#table2').bootstrapTable('load',data);
+            }
         });
     }
 

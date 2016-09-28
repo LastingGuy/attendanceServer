@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Dashboard</title>
+    <title>考勤系统 - 出勤率查询</title>
 
     <link href="{$res_path}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{$res_path}/css/datepicker3.css" rel="stylesheet">
@@ -106,6 +106,7 @@
         selections = getIdSelections();
         // push or splice the selections if you want to save all data selections
     });
+    $("#attendance_li").addClass("active");
 
     function getIdSelections() {
         return $.map($table.bootstrapTable('getSelections'), function (row) {
@@ -121,8 +122,14 @@
         },function(data,status){
             if(data==null)
                 $('#table').bootstrapTable('removeAll');
-            else
+            else{
+                for(var one in data){
+                    if(data.hasOwnProperty(one)){
+                        data[one].rate = data[one].rate + '%';
+                    }
+                }
                 $('#table').bootstrapTable('load',data);
+            }
         });
     }
 </script>

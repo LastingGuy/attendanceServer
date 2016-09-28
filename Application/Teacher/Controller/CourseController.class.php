@@ -7,6 +7,7 @@
  */
 namespace Teacher\Controller;
 use Think\Controller;
+use Common\Common;
 class CourseController extends Controller {
     public function index()
     {
@@ -19,8 +20,14 @@ class CourseController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
 
+        $list = array();
         $model = M('Course');
-        $list = $model->where("tid='$tea_id'")->select();
+        $data = $model->where("tid='$tea_id'")->getField("cid",true);
+
+        foreach ($data as $id){
+            $course = Common\AttendanceRateUtil::queryCourse($id);
+            array_push($list,$course[0]);
+        }
         $this->assign("list",$list);
         $this->display();
     }
@@ -33,7 +40,8 @@ class CourseController extends Controller {
         }
 
         $course_id = I('get.course_id');
-        $course_name = I('get.course_name');
+        $model = M("Course");
+        $course_name = $model->where("cid=$course_id")->getField("cname");
 
         $res_path = C("RES_PATH");
         $this->assign("res_path", $res_path);
@@ -49,6 +57,36 @@ class CourseController extends Controller {
             }
         }
         $this->assign("list", $filelist);
+        $this->display("courseCondition");
+    }
+
+    public function studentsList()
+    {
+        //检测是否登陆和是否有post提交
+        if(!session("?teacher"))
+        {
+            $this->redirect('Index/index');
+        }
+
+        //获取课程id
+        $cid = I('get.course_id');
+        $model = M("Course");
+        $cname = $model->where("cid=$cid")->getField("cname");
+
+        // $cid='1001';
+
+        //连接并查找数据库
+        $model = D('ClassSitutation');
+        $list = $model->relation(true)->where("cid='$cid'")->select();
+
+        foreach ($list as $key=>$item) {
+            $stu = Common\AttendanceRateUtil::queryStudent($item['sid'],$cid);
+            $list[$key]['attendance'] = $stu[0];
+        }
+   
+        $this->assign("cid",$cid);
+        $this->assign("cname",$cname);
+        $this->assign("list",$list);
         $this->display();
     }
 
@@ -63,7 +101,8 @@ class CourseController extends Controller {
         $res_path = C("RES_PATH");
         $this->assign("res_path", $res_path);
         $course_id = I('get.course_id');
-        $course_name = I("get.course_name");
+        $model = M("Course");
+        $course_name = $model->where("cid=$course_id")->getField("cname");
         $date = I('get.date');
 
         $filename = $date . ".xml";
@@ -77,22 +116,22 @@ class CourseController extends Controller {
         $course_data = array();
 
         $root = $xml->documentElement;
-        $course_data['course_id'] = $root->getElementsByTagName("courseid")[0]->nodeValue;
-        $course_data['date'] = $root->getElementsByTagName("date")[0]->nodeValue;
-        $course_data['begin_time'] = $root->getElementsByTagName("ts")[0]->nodeValue;
-        $course_data['end_time'] = $root->getElementsByTagName("te")[0]->nodeValue;
+        $course_data['course_id'] = $root->getElementsByTagName("courseid")->item(0)->nodeValue;
+        $course_data['date'] = $root->getElementsByTagName("date")->item(0)->nodeValue;
+        $course_data['begin_time'] = $root->getElementsByTagName("ts")->item(0)->nodeValue;
+        $course_data['end_time'] = $root->getElementsByTagName("te")->item(0)->nodeValue;
 
         $students = $root->getElementsByTagName("stu");
         foreach ($students as $stu) {
             $data = array();
-            $data['id'] = $stu->getElementsByTagName("id")[0]->nodeValue;
-            $data['name'] = $stu->getElementsByTagName("name")[0]->nodeValue;
-            $data['college'] = $stu->getElementsByTagName("college")[0]->nodeValue;
-            $data['major'] = $stu->getElementsByTagName("major")[0]->nodeValue;
-            $data['class'] = $stu->getElementsByTagName("sclass")[0]->nodeValue;
-            $data['sex'] = $stu->getElementsByTagName("sex")[0]->nodeValue;
-            $data['check'] = $stu->getElementsByTagName("check")[0]->nodeValue;
-            $data['arrive_time'] = $stu->getElementsByTagName("arrive_time")[0]->nodeValue;
+            $data['id'] = $stu->getElementsByTagName("id")->item(0)->nodeValue;
+            $data['name'] = $stu->getElementsByTagName("name")->item(0)->nodeValue;
+            $data['college'] = $stu->getElementsByTagName("college")->item(0)->nodeValue;
+            $data['major'] = $stu->getElementsByTagName("major")->item(0)->nodeValue;
+            $data['class'] = $stu->getElementsByTagName("sclass")->item(0)->nodeValue;
+            $data['sex'] = $stu->getElementsByTagName("sex")->item(0)->nodeValue;
+            $data['check'] = $stu->getElementsByTagName("check")->item(0)->nodeValue;
+            $data['arrive_time'] = $stu->getElementsByTagName("arrive_time")->item(0)->nodeValue;
             array_push($stu_data, $data);
         }
 

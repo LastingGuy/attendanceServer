@@ -12,7 +12,7 @@ class UploadController extends Controller {
     public function upload(){
         if(!session('?teacher'))
         {
-            $this->show("error");
+            $this->ajaxReturn("error");
             return ;
         }
 
@@ -25,7 +25,8 @@ class UploadController extends Controller {
 
         $info = $upload->upload();
         if(!$info){ //上传错误提示错误信息
-            echo 'error';
+            $this->ajaxReturn('error');
+            
         }else{ //上传成功
            //$this->success('上传成功！');
         }
@@ -44,7 +45,7 @@ class UploadController extends Controller {
         //对新文件进行处理
         $this->handleNewXml($newpath,$newname);
 
-        $this->show("success");
+        $this->ajaxReturn("success");
     }
 
     private function handleXml($oldfile,$filename){
@@ -75,10 +76,8 @@ class UploadController extends Controller {
 
                     $model = M("Absence");
                     foreach($elm as $node){
-                        if($node->getElementsByTagName("check")->item(0)->nodeValue==0){
-                            $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
-                            $reuslt = $model->where("sid='$stu_id' and cid='$course_id'")->delete();
-                        }
+                        $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
+                        $model->where("sid='$stu_id' and cid='$course_id'")->delete();
                     }
                 }
             }
@@ -106,16 +105,16 @@ class UploadController extends Controller {
 
             //增加缺勤情况
             $elm = $root->getElementsByTagName("stu");
-            $model = D("Absence");
+            $model = D("Attendance");
             foreach($elm as $node) {
-                if($node->getElementsByTagName("check")->item(0)->nodeValue==0) {
-                    $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
-                    $data['cid'] = $course_id;
-                    $data['sid'] = $stu_id;
-                    $data['date'] = $filename;
-                    //$this->success($course_id." ".$stu_id." ".$filename);
-                    $model->add($data);
-                }
+                $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
+                $data['cid'] = $course_id;
+                $data['sid'] = $stu_id;
+                $data['date'] = $filename;
+                $data['checkin'] = $node->getElementsByTagName("check")->item(0)->nodeValue;
+                //$this->success($course_id." ".$stu_id." ".$filename);
+                $model->add($data);
+
             }
         }
 

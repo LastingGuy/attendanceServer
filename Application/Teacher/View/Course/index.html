@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Dashboard</title>
+    <title>考勤系统 - 个人课程</title>
 
     <link href="{$res_path}/css/bootstrap.min.css" rel="stylesheet">
     <link href="{$res_path}/css/datepicker3.css" rel="stylesheet">
@@ -26,15 +26,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
+            <a class="navbar-brand" href="#"><span>考勤系统</span></a>
             <ul class="user-menu">
-                <li class="dropdown pull-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-                    </ul>
+                    <li class="dropdown pull-right">
+                        <a href="#"><span class="glyphicon glyphicon-user"></span> 教师 </a>
                 </li>
             </ul>
         </div>
@@ -84,12 +79,12 @@
                                 <td></td>
                                 <td>{$vo.cid}</td>
                                 <td>{$vo.cname}</td>
-                                <td></td>
+                                <td>{$vo.rate}%</td>
                                 <td>
-                                    <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id={$vo.cid}&course_name={$vo.cname}">查 看</a>
+                                    <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id={$vo.cid}">查 看</a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id={$vo.cid}&course_name={$vo.cname}">查 看</a>
+                                    <a class="btn btn-primary btn-xs" target="_blank" href="../Course/studentslist?course_id={$vo.cid}">查 看</a>
                                 </td>
                             </tr>
                         </volist>
@@ -106,6 +101,7 @@
 <script src="{$res_path}/js/jquery-1.11.1.min.js"></script>
 <script src="{$res_path}/js/bootstrap.min.js"></script>
 <script src="{$res_path}/js/bootstrap-table.js"></script>
+<script src="{$res_path}/js/locale/bootstrap-table-zh-CN.js"></script>
 <script>
 
     function edit_before(){
