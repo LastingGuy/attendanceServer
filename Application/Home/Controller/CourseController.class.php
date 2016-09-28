@@ -50,6 +50,13 @@ class CourseController extends Controller
         $this->ajaxReturn($return_data);
     }
 
+    public function search(){
+        $text = I("get.text");
+        $model = D("Course");
+        $list = $model->order("cid")->where("cid=$text")->relation(true)->select();
+        $this->ajaxReturn($list);
+    }
+
     public function add()
     {
         if(!session('?admin'))

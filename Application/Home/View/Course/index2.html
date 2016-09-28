@@ -220,6 +220,15 @@
     $("#table").bootstrapTable({
         url:"http://xxbird.cn/attendance/index.php/home/Course/getCourse",
         sidePagination:"server",
+        silentSort:true,
+        customSearch:function(text){
+            $.get("../Course/search",{
+                text:text
+            },function(data,status){
+                $("#table").bootstrapTable("removeAll");
+                $("#table").bootstrapTable("load","data");
+            })
+        }
     });
     $("#course_li").addClass("active");
 
