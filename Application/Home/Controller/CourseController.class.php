@@ -24,6 +24,31 @@ class CourseController extends Controller
         $this->assign("list", $list);
         $this->display();
     }
+    public function index2()
+    {
+        if(!session('?admin'))
+        {
+            header('Location:'.U("Home/Index/index"));
+        }
+
+        $res_path = C("RES_PATH");
+        $this->assign("res_path", $res_path);
+
+        $this->display();
+    }
+
+    public function getCourse(){
+        $offset = I("get.offset");
+        $limit = I("get.limit");
+
+        $model = D("Course");
+        $count = $model->count();
+        $list = $model->order("cid")->limit($offset,$limit)->relation(true)->select();
+        $return_data = array();
+        $return_data['total'] = $count;
+        $return_data['rows'] = $list;
+        $this->ajaxReturn($return_data);
+    }
 
     public function add()
     {
