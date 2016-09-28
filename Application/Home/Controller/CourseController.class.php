@@ -43,7 +43,7 @@ class CourseController extends Controller
 
         $model = D("Course");
         $count = $model->count();
-        $list = $model->order("cid")->limit($offset*$limit,$limit)->relation(true)->select();
+        $list = $model->order("cid")->limit($offset,$limit)->relation(true)->select();
         $return_data = array();
         $return_data['total'] = $count;
         $return_data['rows'] = $list;
