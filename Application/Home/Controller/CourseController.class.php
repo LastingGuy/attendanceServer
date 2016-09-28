@@ -38,14 +38,16 @@ class CourseController extends Controller
     }
 
     public function getCourse(){
-        $pageSize = 10;
-        $page = 1;
+        $offset = I("get.offset");
+        $limit = I("get.limit");
 
         $model = M("Course");
         $count = $model->count();
-        $pageNumber = ceil(number_format($count / $pageSize,1));
-        $list = $model->order("cid")->limit($page*$pageSize+1,$pageSize)->select();
-        
+        $list = $model->order("cid")->limit($offset*$limit,$limit)->select();
+        $return_data = array();
+        $return_data['total'] = $count;
+        $return_data['rows'] = $list;
+        $this->ajaxReturn($return_data);
     }
 
     public function add()
