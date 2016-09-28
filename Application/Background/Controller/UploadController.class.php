@@ -12,7 +12,7 @@ class UploadController extends Controller {
     public function upload(){
         if(!session('?teacher'))
         {
-            $this->show("error");
+            $this->ajaxReturn("error");
             return ;
         }
 
@@ -25,7 +25,8 @@ class UploadController extends Controller {
 
         $info = $upload->upload();
         if(!$info){ //上传错误提示错误信息
-            echo 'error';
+            $this->ajaxReturn('error');
+            
         }else{ //上传成功
            //$this->success('上传成功！');
         }
@@ -44,7 +45,7 @@ class UploadController extends Controller {
         //对新文件进行处理
         $this->handleNewXml($newpath,$newname);
 
-        $this->show("success");
+        $this->ajaxReturn("success");
     }
 
     private function handleXml($oldfile,$filename){
