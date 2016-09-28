@@ -222,7 +222,11 @@
         sidePagination:"server",
         silentSort:true,
         queryParams:function (params) {
-            var temp ={searchText:params.searchText};
+            var temp ={
+                searchText: params.searchText,
+                offset: params.offset,
+                limit: params.limit
+            };
             return temp;
         }
     });
