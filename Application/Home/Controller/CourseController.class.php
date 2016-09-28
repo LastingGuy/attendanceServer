@@ -24,6 +24,29 @@ class CourseController extends Controller
         $this->assign("list", $list);
         $this->display();
     }
+    public function index2()
+    {
+        if(!session('?admin'))
+        {
+            header('Location:'.U("Home/Index/index"));
+        }
+
+        $res_path = C("RES_PATH");
+        $this->assign("res_path", $res_path);
+
+        $this->display();
+    }
+
+    public function getCourse(){
+        $pageSize = 10;
+        $page = 1;
+
+        $model = M("Course");
+        $count = $model->count();
+        $pageNumber = ceil(number_format($count / $pageSize,1));
+        $list = $model->order("cid")->limit($page*$pageSize+1,$pageSize)->select();
+        
+    }
 
     public function add()
     {

@@ -77,24 +77,24 @@
                         </thead>
                         <tbody>
                         <volist name="list" id="vo">
-                        <tr>
-                            <td></td>
-                            <td>{$vo.cid}</td>
-                            <td>{$vo.cname}</td>
-                            <td>{$vo.teacher.tid}</td>
-                            <td>{$vo.teacher.tname}</td>
-                            <td>{$vo.term}</td>
-                            <td>
-                                <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id={$vo.cid}&course_name={$vo.cname}">考 勤</a>
-                                <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                         onclick="getStudentsList({$vo.cid});">名单</button> 
-                            </td>
-                            <td>
-                                <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                        data-target="#changeModal" onclick="edit_before({$vo.cid});">编 辑</button>
-                                       
-                                        </td>
-                        </tr>
+                            <tr>
+                                <td></td>
+                                <td>{$vo.cid}</td>
+                                <td>{$vo.cname}</td>
+                                <td>{$vo.teacher.tid}</td>
+                                <td>{$vo.teacher.tname}</td>
+                                <td>{$vo.term}</td>
+                                <td>
+                                    <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id={$vo.cid}&course_name={$vo.cname}">考 勤</a>
+                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                            onclick="getStudentsList({$vo.cid});">名单</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
+                                            data-target="#changeModal" onclick="edit_before({$vo.cid});">编 辑</button>
+
+                                </td>
+                            </tr>
                         </volist>
                         </tbody>
                     </table>
@@ -236,7 +236,10 @@
         // push or splice the selections if you want to save all data selections
     });
 
-
+    $("#table").bootstrapTable({
+        url:"http://xxbird.cn/attendance/index.php/home/Course/getCourse",
+        sidePagination:"server",
+    });
     $("#course_li").addClass("active");
 
     function getIdSelections() {
@@ -295,12 +298,12 @@
     //搜索到教师
     function findTeachers(){
         $.get("../Course/findTeachers",
-        null,
-        function(data,status){
-            $('#teacher').empty();
-            for(var id in data)
-                $('#teacher').append("<option value="+data[id]['tid']+">"+data[id]['tid']+"  "+data[id]['tname']+"</option>");
-        });
+                null,
+                function(data,status){
+                    $('#teacher').empty();
+                    for(var id in data)
+                        $('#teacher').append("<option value="+data[id]['tid']+">"+data[id]['tid']+"  "+data[id]['tname']+"</option>");
+                });
     }
 
     //编辑前
@@ -352,7 +355,7 @@
 
     function getStudentsList(cid)
     {
-         window.open("../Course/studentslist?cid="+cid);
+        window.open("../Course/studentslist?cid="+cid);
     }
 
 
