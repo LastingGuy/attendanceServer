@@ -31,7 +31,7 @@ class StudentController extends Controller
         if($search==""){
             $model = D("Student");
             $count = $model->count();
-            $list = $model->order("sid")->limit($offset,$limit)->relation(true)->select();
+            $list = $model->order("sid")->limit($offset,$limit)->select();
             $return_data = array();
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
@@ -45,8 +45,8 @@ class StudentController extends Controller
         }
         else{
             $model = D("Student");
-            $count = $model->where("sid=$search")->order("cid")->limit($offset,$limit)->relation(true)->count();
-            $list = $model->where("sid=$search")->order("cid")->limit($offset,$limit)->relation(true)->select();
+            $count = $model->where("sid=$search")->order("cid")->limit($offset,$limit)->count();
+            $list = $model->where("sid=$search")->order("cid")->limit($offset,$limit)->select();
             $return_data = array();
             $return_data['total'] = $count;
             $return_data['rows'] = $list;

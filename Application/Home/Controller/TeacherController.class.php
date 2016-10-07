@@ -30,7 +30,7 @@ class TeacherController extends Controller {
         if($search==""){
             $model = D("Teacher");
             $count = $model->count();
-            $list = $model->order("tid")->limit($offset,$limit)->relation(true)->select();
+            $list = $model->order("tid")->limit($offset,$limit)->select();
             $return_data = array();
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
@@ -42,8 +42,8 @@ class TeacherController extends Controller {
         }
         else{
             $model = D("Teacher");
-            $count = $model->where("tid=$search")->order("cid")->limit($offset,$limit)->relation(true)->count();
-            $list = $model->where("tid=$search")->order("cid")->limit($offset,$limit)->relation(true)->select();
+            $count = $model->where("tid=$search")->order("cid")->limit($offset,$limit)->count();
+            $list = $model->where("tid=$search")->order("cid")->limit($offset,$limit)->select();
             $return_data = array();
             $return_data['total'] = $count;
             $return_data['rows'] = $list;

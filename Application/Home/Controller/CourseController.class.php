@@ -22,19 +22,7 @@ class CourseController extends Controller
 
         $this->display();
     }
-    
-    public function index2()
-    {
-        if(!session('?admin'))
-        {
-            header('Location:'.U("Home/Index/index"));
-        }
 
-        $res_path = C("RES_PATH");
-        $this->assign("res_path", $res_path);
-
-        $this->display();
-    }
 
     public function getCourse(){
         $offset = I("get.offset");
