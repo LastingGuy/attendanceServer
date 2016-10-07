@@ -77,20 +77,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <volist name="list" id="vo">
-                            <tr>
-                                <td></td>
-                                <td>{$vo.tid}</td>
-                                <td>{$vo.tname}</td>
-                                <td><if condition="(vo.tsex eq true)">男
-                                    <else />女
-                                    </if>
-                                </td>
-                                <td>{$vo.tpassword}</td>
-                                <td><button class="btn btn-primary btn-xs" data-toggle="modal"
-                                            data-target="#changeModal" onclick="edit_before({$vo.tid});">编 辑</button></td>
-                            </tr>
-                            </volist>
                         </tbody>
                     </table>
                 </div>
