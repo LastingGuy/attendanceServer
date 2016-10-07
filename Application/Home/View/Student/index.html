@@ -68,49 +68,21 @@
                             <thead>
                             <tr>
                                 <th data-field="state" data-checkbox="true" >Item ID</th>
-                                <th data-field="id" data-sortable="true">学 号</th>
-                                <th data-field="name">姓 名</th>
-                                <th data-field="sex"  data-sortable="true">性 别</th>
-                                <th data-field="nationality">国 家</th>
-                                <th data-field="college">学 院</th>
-                                <th data-field="major">专 业</th>
-                                <th data-field="class" >班 级</th>
-                                <th data-field="tel">电 话</th>
-                                <th data-field="mac" >Mac地址</th>
-                                <th data-field="password" >密 码</th>
+                                <th data-field="sid" data-sortable="true">学 号</th>
+                                <th data-field="sname">姓 名</th>
+                                <th data-field="ssex"  data-sortable="true">性 别</th>
+                                <th data-field="snationality">国 家</th>
+                                <th data-field="scollege">学 院</th>
+                                <th data-field="smajor">专 业</th>
+                                <th data-field="sclass" >班 级</th>
+                                <th data-field="stel">电 话</th>
+                                <th data-field="smac" >Mac地址</th>
+                                <th data-field="spassword" >密 码</th>
                                 <th data-field="edit">编 辑</th>
                                 <th data-field="courselist">查 看</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <volist name="list" id="vo">
-                            <tr>
-                                <td></td>
-                                <td>{$vo.sid}</td>
-                                <td>{$vo.sname}</td>
-                                <td>
-                                    <if condition="$vo.ssex eq 1">男
-                                    </if>
-                                    <if condition="$vo.ssex eq 0">女
-                                    </if>
-                                </td>
-                                <td>{$vo.snationality}</td>
-                                <td>{$vo.scollege}</td>
-                                <td>{$vo.smajor}</td>
-                                <td>{$vo.sclass}</td>
-                                <td>{$vo.stel}</td>
-                                <td>{$vo.smac}</td>
-                                <td>{$vo.spassword}</td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                            data-target="#changeModal" onclick="edit_before({$vo.sid});">编 辑</button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                             onclick="courselist({$vo.sid});">课 程</button>
-                                </td>
-                            </tr>
-                            </volist>
                             </tbody>
                         </table>
                     </div>
