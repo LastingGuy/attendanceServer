@@ -19,11 +19,10 @@ class CourseController extends Controller
 
         $res_path = C("RES_PATH");
         $this->assign("res_path", $res_path);
-        $model = D("Course");
-        $list = $model->relation(true)->select();
-        $this->assign("list", $list);
+
         $this->display();
     }
+    
     public function index2()
     {
         if(!session('?admin'))
@@ -52,7 +51,7 @@ class CourseController extends Controller
         }
         else{
             $model = D("Course");
-            $count = $model->count();
+            $count = $model->where("cid=$search")->order("cid")->limit($offset,$limit)->relation(true)->count();
             $list = $model->where("cid=$search")->order("cid")->limit($offset,$limit)->relation(true)->select();
             $return_data = array();
             $return_data['total'] = $count;

@@ -76,26 +76,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <volist name="list" id="vo">
-                        <tr>
-                            <td></td>
-                            <td>{$vo.cid}</td>
-                            <td>{$vo.cname}</td>
-                            <td>{$vo.teacher.tid}</td>
-                            <td>{$vo.teacher.tname}</td>
-                            <td>{$vo.term}</td>
-                            <td>
-                                <a class="btn btn-primary btn-xs" href="../Course/courseCondition?course_id={$vo.cid}&course_name={$vo.cname}">考 勤</a>
-                                <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                         onclick="getStudentsList({$vo.cid});">名单</button> 
-                            </td>
-                            <td>
-                                <button class="btn btn-primary btn-xs" data-toggle="modal"
-                                        data-target="#changeModal" onclick="edit_before({$vo.cid});">编 辑</button>
-                                       
-                                        </td>
-                        </tr>
-                        </volist>
                         </tbody>
                     </table>
                 </div>
@@ -236,6 +216,19 @@
         // push or splice the selections if you want to save all data selections
     });
 
+    $("#table").bootstrapTable({
+        url:"{:U('Home/Course/getCourse')}",
+        sidePagination:"server",
+        silentSort:true,
+        queryParams:function (params) {
+            var temp ={
+                search: params.search,
+                offset: params.offset,
+                limit: params.limit
+            };
+            return temp;
+        }
+    });
 
     $("#course_li").addClass("active");
 

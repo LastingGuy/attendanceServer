@@ -16,11 +16,35 @@ class TeacherController extends Controller {
         }
         $res_path = C("RES_PATH");
         $this->assign("res_path",$res_path);
-        $tea = M('Teacher');
+      /*  $tea = M('Teacher');
         $list = $tea->select();
-        $this->assign('list',$list);
+        $this->assign('list',$list);*/
 
         $this->display();
+    }
+
+    public function getTeacher(){
+        $offset = I("get.offset");
+        $limit = I("get.limit");
+        $search = I("get.search");
+        if($search==""){
+            $model = D("Teacher");
+            $count = $model->count();
+            $list = $model->order("tid")->limit($offset,$limit)->relation(true)->select();
+            $return_data = array();
+            $return_data['total'] = $count;
+            $return_data['rows'] = $list;
+            $this->ajaxReturn($return_data);
+        }
+        else{
+            $model = D("Teacher");
+            $count = $model->where("tid=$search")->order("cid")->limit($offset,$limit)->relation(true)->count();
+            $list = $model->where("tid=$search")->order("cid")->limit($offset,$limit)->relation(true)->select();
+            $return_data = array();
+            $return_data['total'] = $count;
+            $return_data['rows'] = $list;
+            $this->ajaxReturn($return_data);
+        }
     }
 
     public function add(){

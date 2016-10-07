@@ -381,6 +381,20 @@
             // push or splice the selections if you want to save all data selections
         });
 
+        $("#table").bootstrapTable({
+            url:"{:U('Home/Student/getStudent')}",
+            sidePagination:"server",
+            silentSort:true,
+            queryParams:function(params){
+                var temp = {
+                    search: params.search,
+                    offset: params.offset,
+                    limit: params.limit
+                };
+                return temp;
+            }
+        });
+
         $("#student_li").addClass("active");
         function getIdSelections() {
             return $.map($table.bootstrapTable('getSelections'), function (row) {

@@ -18,11 +18,35 @@ class StudentController extends Controller
         }
         $res_path = C("RES_PATH");
         $this->assign("res_path", $res_path);
-        $stu = M("Student");
+        /*$stu = M("Student");
         $list = $stu->select();
-        $this->assign("list",$list);
-
+        $this->assign("list",$list);*/
         $this->display();
+    }
+
+    public function getStudent(){
+        $offset = I("get.offset");
+        $limit = I("get.limit");
+        $search = I("get.search");
+        if($search==""){
+            $model = D("Student");
+            $count = $model->count();
+            $list = $model->order("sid")->limit($offset,$limit)->relation(true)->select();
+            $return_data = array();
+            $return_data['total'] = $count;
+            $return_data['rows'] = $list;
+            $this->ajaxReturn($return_data);
+        }
+        else{
+            $model = D("Student");
+            $count = $model->where("sid=$search")->order("cid")->limit($offset,$limit)->relation(true)->count();
+            $list = $model->where("sid=$search")->order("cid")->limit($offset,$limit)->relation(true)->select();
+            $return_data = array();
+            $return_data['total'] = $count;
+            $return_data['rows'] = $list;
+            $this->ajaxReturn($return_data);
+        }
+
     }
 
     //学生选课课表
