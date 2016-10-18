@@ -3,7 +3,7 @@ create table kaoqin_student
 (
 	sid varchar(20),
     sname varchar(20),
-    ssex  bit,
+    ssex  int,
     snationality varchar(20),
     scollege varchar(20),
     smajor varchar(20),
@@ -29,7 +29,7 @@ create table kaoqin_teacher
 (
 	tid varchar(20),
     tname varchar(20),
-    tsex bit,
+    tsex int,
     tpassword varchar(20),
     tchange varchar(35),
     constraint pk_kaoqin_teacher primary key(tid)
@@ -69,79 +69,77 @@ create table kaoqin_attendance
 );
 
 DELIMITER $
-create trigger absence_insert_trigger
-after insert on kaoqin_absence
+create trigger attendance_insert_trigger
+after insert on kaoqin_attendance
 for each row 
 begin 
 	declare absence_sid,absence_cid varchar(20);
     set absence_sid = new.sid;
     set absence_cid = new.cid;
-	update kaoqin_class_situtation set absence_number = absence_number+1 
-    where sid=absence_sid and cid=absence_cid;
-end
+    if new.checkin = 0 then
+	    update kaoqin_class_situtation set absence_number = absence_number+1
+        where sid=absence_sid and cid=absence_cid;
+    end if;
+end$
 
 DELIMITER $
-create trigger absence_delete_trigger
-after delete on kaoqin_absence
+create trigger attendance_delete_trigger
+after delete on kaoqin_attendance
 for each row 
 begin 
 	declare absence_sid,absence_cid varchar(20);
     set absence_sid = old.sid;
     set absence_cid = old.cid;
-	update kaoqin_class_situtation set absence_number = absence_number-1 
-    where sid=absence_sid and cid=absence_cid;
-end
+    if old.checkin = 0 then
+      update kaoqin_class_situtation set absence_number = absence_number-1
+        where sid=absence_sid and cid=absence_cid;
+    end if;
+end$
 
 DELIMITER $
-CREATE DEFINER=`root`@`localhost` TRIGGER `attendance`.`kaoqin_teacher_BEFORE_INSERT` BEFORE INSERT ON `kaoqin_teacher` FOR EACH ROW
+CREATE  TRIGGER `kaoqin_teacher_BEFORE_INSERT` BEFORE INSERT ON `kaoqin_teacher` FOR EACH ROW
 BEGIN
 	set new.tchange = md5(unix_timestamp());
-END
+END$
 
 DELIMITER $
-CREATE DEFINER=`root`@`localhost` TRIGGER `attendance`.`kaoqin_course_BEFORE_INSERT` BEFORE INSERT ON `kaoqin_course` FOR EACH ROW
+CREATE  TRIGGER `kaoqin_course_BEFORE_INSERT` BEFORE INSERT ON `kaoqin_course` FOR EACH ROW
 BEGIN
 	declare tea_id varchar(20);
     set tea_id = new.tid;
 	update kaoqin_teacher set tchange = md5(unix_timestamp()) where tid = tea_id;
-END
+END$
+
+
 
 DELIMITER $
-CREATE DEFINER=`root`@`localhost` TRIGGER `attendance`.`kaoqin_class_situtation_BEFORE_UPDATE` BEFORE UPDATE ON `kaoqin_class_situtation` FOR EACH ROW
-BEGIN
-	declare tea_id varchar(20);
-    set tea_id = (select tid from kaoqin_course where cid = new.cid);
-	update kaoqin_teacher set tchange = md5(unix_timestamp()) where tid = tea_id;
-END
-
-DELIMITER $
-CREATE DEFINER=`root`@`localhost` TRIGGER `attendance`.`kaoqin_class_situtation_BEFORE_DELETE` BEFORE DELETE ON `kaoqin_class_situtation` FOR EACH ROW
+CREATE  TRIGGER `kaoqin_class_situtation_BEFORE_DELETE` BEFORE DELETE ON `kaoqin_class_situtation` FOR EACH ROW
 BEGIN
 	declare tea_id varchar(20);
     set tea_id = (select tid from kaoqin_course where cid = old.cid);
 	update kaoqin_teacher set tchange = md5(unix_timestamp()) where tid = tea_id;
-END
+END$
 
 DELIMITER $
-CREATE DEFINER=`root`@`localhost` TRIGGER `attendance`.`kaoqin_class_situtation_BEFORE_INSERT` BEFORE INSERT ON `kaoqin_class_situtation` FOR EACH ROW
+CREATE  TRIGGER `kaoqin_class_situtation_BEFORE_INSERT` BEFORE INSERT ON `kaoqin_class_situtation` FOR EACH ROW
 BEGIN
 	declare tea_id varchar(20);
     set tea_id = (select tid from kaoqin_course where cid = new.cid);
 	update kaoqin_teacher set tchange = md5(unix_timestamp()) where tid = tea_id;
-END
+END$
 
 DELIMITER $
-CREATE DEFINER=`root`@`localhost` TRIGGER `attendance`.`kaoqin_class_situtation_BEFORE_UPDATE` BEFORE UPDATE ON `kaoqin_class_situtation` FOR EACH ROW
+CREATE TRIGGER `kaoqin_class_situtation_BEFORE_UPDATE` BEFORE UPDATE ON `kaoqin_class_situtation` FOR EACH ROW
 BEGIN
 	declare tea_id varchar(20);
     set tea_id = (select tid from kaoqin_course where cid = new.cid);
 	update kaoqin_teacher set tchange = md5(unix_timestamp()) where tid = tea_id;
-END
+END$
 
 DELIMITER $
-CREATE DEFINER=`root`@`localhost` TRIGGER `attendance`.`kaoqin_class_situtation_BEFORE_DELETE` BEFORE DELETE ON `kaoqin_class_situtation` FOR EACH ROW
+CREATE  TRIGGER `kaoqin_class_situtation_BEFORE_DELETE` BEFORE DELETE ON `kaoqin_class_situtation` FOR EACH ROW
 BEGIN
 	declare tea_id varchar(20);
     set tea_id = (select tid from kaoqin_course where cid = old.cid);
 	update kaoqin_teacher set tchange = md5(unix_timestamp()) where tid = tea_id;
-END
+END$
