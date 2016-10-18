@@ -36,6 +36,11 @@ class StudentController extends Controller
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
             foreach ($return_data['rows'] as $key=>$value){
+                if($return_data['rows'][$key]['ssex'] == 1)
+                    $return_data['rows'][$key]['ssex'] = '男';
+                else
+                    $return_data['rows'][$key]['ssex'] = '女';
+
                 $return_data['rows'][$key]['edit'] = "<button class='btn btn-primary btn-xs' data-toggle='modal'
                                             data-target='#changeModal' onclick='edit_before(".$return_data['rows'][$key]['sid'].");'>编 辑</button>";
                 $return_data['rows'][$key]['courselist'] = "<button class='btn btn-primary btn-xs'data-toggle='modal'
@@ -51,6 +56,11 @@ class StudentController extends Controller
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
             foreach ($return_data['rows'] as $key=>$value){
+                if($return_data['rows'][$key]['ssex'] == 1)
+                    $return_data['rows'][$key]['ssex'] = '男';
+                else
+                    $return_data['rows'][$key]['ssex'] = '女';
+                
                 $return_data['rows'][$key]['edit'] = "<button class='btn btn-primary btn-xs' data-toggle='modal'
                                             data-target='#changeModal' onclick='edit_before(".$return_data['rows'][$key]['sid'].");'>编 辑</button>";
                 $return_data['rows'][$key]['courselist'] = "<button class='btn btn-primary btn-xs'data-toggle='modal'

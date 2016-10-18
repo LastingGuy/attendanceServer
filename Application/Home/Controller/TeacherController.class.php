@@ -53,7 +53,7 @@ class TeacherController extends Controller {
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
             foreach ($return_data['rows'] as $key=>$value){
-                if($return_data['rows'][$key]['tsex'] == 1) 
+                if($return_data['rows'][$key]['tsex'] == 1)
                     $return_data['rows'][$key]['tsex'] = '男';
                 else
                     $return_data['rows'][$key]['tsex'] = '女';
