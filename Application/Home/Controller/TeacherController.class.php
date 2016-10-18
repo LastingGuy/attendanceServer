@@ -35,8 +35,13 @@ class TeacherController extends Controller {
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
             foreach ($return_data['rows'] as $key=>$value){
+                if($return_data['rows'][$key]['tsex'] == 1)
+                    $return_data['rows'][$key]['tsex'] = '男';
+                else
+                    $return_data['rows'][$key]['tsex'] = '女';
+
                 $return_data['rows'][$key]['edit'] = "<button class='btn btn-primary btn-xs' data-toggle='modal'
-                                             onclick='edit_before(". $return_data['rows'][$key]['tid'].");'>编 辑</button>";
+                                             onclick='edit_before('". $return_data['rows'][$key]['tid']."');'>编 辑</button>";
             }
             $this->ajaxReturn($return_data);
         }
@@ -48,8 +53,12 @@ class TeacherController extends Controller {
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
             foreach ($return_data['rows'] as $key=>$value){
+                if($return_data['rows'][$key]['tsex'] == 1) 
+                    $return_data['rows'][$key]['tsex'] = '男';
+                else
+                    $return_data['rows'][$key]['tsex'] = '女';
                 $return_data['rows'][$key]['edit'] = "<button class='btn btn-primary btn-xs' data-toggle='modal'
-                                             onclick='edit_before(". $return_data['rows'][$key]['tid'].");'>编 辑</button>";
+                                             onclick='edit_before('". $return_data['rows'][$key]['tid']."');'>编 辑</button>";
             }
             $this->ajaxReturn($return_data);
         }
