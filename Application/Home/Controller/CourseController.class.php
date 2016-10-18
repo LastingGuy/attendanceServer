@@ -35,6 +35,15 @@ class CourseController extends Controller
             $return_data = array();
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
+            foreach ($return_data['rows'] as $key=>$value) {
+                $return_data['rows'][$key]['attendance'] =  "<a class='btn btn-primary btn-xs' href='../Course/courseCondition?course_id=".$return_data['rows'][$key]['cid']."&course_name=".$return_data['rows'][$key]['cname']."'>考 勤</a>
+                                <button class='btn btn-primary btn-xs' data-toggle='modal'
+                                         onclick='getStudentsList(".$return_data['rows'][$key]['cid'].");'>名单</button> ";
+                $return_data['rows'][$key]['edit'] = "<button class=\"btn btn-primary btn-xs\" data-toggle=\"modal\"
+                                        data-target=\"#changeModal\" onclick=\"edit_before(".$return_data['rows'][$key]['cid'].");\">编 辑</button>
+                                       
+                                        </td>";
+            }
             $this->ajaxReturn($return_data);
         }
         else{
@@ -44,6 +53,15 @@ class CourseController extends Controller
             $return_data = array();
             $return_data['total'] = $count;
             $return_data['rows'] = $list;
+            foreach ($return_data['rows'] as $key=>$value) {
+                $return_data['rows'][$key]['attendance'] =  "<a class='btn btn-primary btn-xs' href='../Course/courseCondition?course_id=".$return_data['rows'][$key]['cid']."&course_name=".$return_data['rows'][$key]['cname']."'>考 勤</a>
+                                <button class='btn btn-primary btn-xs' data-toggle='modal'
+                                         onclick='getStudentsList(".$return_data['rows'][$key]['cid'].");'>名单</button> ";
+                $return_data['rows'][$key]['edit'] = "<button class=\"btn btn-primary btn-xs\" data-toggle=\"modal\"
+                                        data-target=\"#changeModal\" onclick=\"edit_before(".$return_data['rows'][$key]['cid'].");\">编 辑</button>
+                                       
+                                        </td>";
+            }
             $this->ajaxReturn($return_data);
         }
 

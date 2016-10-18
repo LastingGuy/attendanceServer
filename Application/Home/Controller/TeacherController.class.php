@@ -41,7 +41,7 @@ class TeacherController extends Controller {
                     $return_data['rows'][$key]['tsex'] = '女';
 
                 $return_data['rows'][$key]['edit'] = "<button class='btn btn-primary btn-xs' data-toggle='modal' data-target='#changeModal'
-                                             onclick=\"edit_before('".$return_data['rows'][$key]['tid']."')\">编 辑</button>";
+                                             onclick=\"get('".$return_data['rows'][$key]['tid']."')\">编 辑</button>";
             }
             $this->ajaxReturn($return_data);
         }
