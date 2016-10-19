@@ -32,7 +32,7 @@ class UploadController extends Controller {
         }
         $oldfile = C("UPLOAD_ROOT").'/'.$info['file']['savename'];
         //判断文件是否已经存在并处理:
-        $course_id = $this->handleXml($oldfile,$info['file']['name']);
+        $course_id = $this->handleOldXml($oldfile,$info['file']['name']);
 
 
         $newpath = C("SAVE_ROOT").'/'.$course_id;
@@ -48,7 +48,7 @@ class UploadController extends Controller {
         $this->ajaxReturn("success");
     }
 
-    private function handleXml($oldfile,$filename){
+    private function handleOldXml($oldfile,$filename){
 
         $xml = new \DOMDocument();
         $course_id = null;
@@ -57,15 +57,11 @@ class UploadController extends Controller {
     
         if($flag){
             $root = $xml->documentElement;
-            $elm = $root->getElementsByTagName("courseid");
-            foreach($elm as $v)
-            {
-                $course_id = $v->nodeValue;
-            }
+            $course_id = $root->getElementsByTagName("courseid")->item(0)->nodeValue;
 
             //查看文件是否存在
             if(file_exists(C("SAVE_ROOT").'/'.$course_id.'/'.$filename)) {
-                //文件存在，删除缺勤人数上
+                //文件存在，清楚kaoqin_attendance数据
                 $xml = new \DOMDocument();
                 if($xml->load(C("SAVE_ROOT").'/'.$course_id.'/'.$filename)){
                     $root = $xml->documentElement;
