@@ -218,7 +218,10 @@ class CourseController extends Controller
         $filepath = $dir . '/' . $course_id . '/' . $filename;
 
         $xml = new \DOMDocument();
+        $stu_data = null;
+        $course_data = null;
         if($xml->load($filepath)){
+            var_dump("文件存在");
             //从xml文件中读取的数据存放在此处
             $stu_data = array();
             $course_data = array();
