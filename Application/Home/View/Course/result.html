@@ -104,7 +104,8 @@
                                 <td>{$vo.name}</td>
                                 <td>{$vo.id}</td>
                                 <if condition="$vo.sex eq 1"><td>男</td>
-                                    <else/><td>女</td>
+                                    <elseif condition="$vo.sex eq 0"/><td>女</td>
+                                    <else/><td></td>
                                 </if>
                                 <td>{$vo.college}</td>
                                 <td>{$vo.major}</td>

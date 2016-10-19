@@ -76,7 +76,7 @@ begin
 	declare absence_sid,absence_cid varchar(20);
     set absence_sid = new.sid;
     set absence_cid = new.cid;
-    if new.checkin = 0 then
+    if new.checkin = 1 then
 	    update kaoqin_class_situtation set absence_number = absence_number+1
         where sid=absence_sid and cid=absence_cid;
     end if;
