@@ -215,12 +215,11 @@ class CourseController extends Controller
 
         $filename = $date . ".xml";
         $dir = C("SAVE_ROOT");
-        $filepath = $dir . '/' . $course_id . '/' . $filename;
+        $filepath = $dir . $course_id . '/' . $filename;
 
         $xml = new \DOMDocument();
         $stu_data = null;
         $course_data = null;
-        var_dump($filepath);
         if($xml->load($filepath)){
             //从xml文件中读取的数据存放在此处
             $stu_data = array();
@@ -244,6 +243,7 @@ class CourseController extends Controller
                 $data['check'] = $stu->getElementsByTagName("check")->item[0]->nodeValue;
                 $data['arrive_time'] = $stu->getElementsByTagName("arrive_time")->item[0]->nodeValue;
                 array_push($stu_data, $data);
+                var_dump($data);
             }
         }
 
