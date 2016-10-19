@@ -110,10 +110,9 @@
                                 <td>{$vo.college}</td>
                                 <td>{$vo.major}</td>
                                 <td>{$vo.class}</td>
-
-                                    <if condition="$vo.check eq 1"><td style="color:green">是</td>
-                                        <else/><td style="color:red;">否</td>
-                                    </if>
+                                <if condition="$vo.check eq 1"><td><div  style="color:green">是</div></td>
+                                    <else/><td><div  style="color:red;">否</div></td>
+                                </if>
                                 <td>{$vo.arrive_time}</td>
                             </tr>
                         </volist>
@@ -130,5 +129,8 @@
 <script src="{$res_path}/js/bootstrap.min.js"></script>
 <script src="{$res_path}/js/bootstrap-table.js"></script>
 <script src="{$res_path}/js/locale/bootstrap-table-zh-CN.js"></script>
+<script>
+    $("#student_li").addClass("active");
+</script>
 </body>
 </html>
