@@ -220,8 +220,8 @@ class CourseController extends Controller
         $xml = new \DOMDocument();
         $stu_data = null;
         $course_data = null;
+        var_dump($filepath);
         if($xml->load($filepath)){
-            var_dump("文件存在");
             //从xml文件中读取的数据存放在此处
             $stu_data = array();
             $course_data = array();
@@ -246,17 +246,12 @@ class CourseController extends Controller
                 array_push($stu_data, $data);
             }
         }
-        else{
-            var_dump("文件不存在");
-        }
-
 
         $this->assign("course_id", $course_id);
         $this->assign("course_name", $course_name);
         $this->assign("stu_data",$stu_data);
         $this->assign("course_data",$course_data);
         $this->display();
-
     }
 
     //获得学生名单
