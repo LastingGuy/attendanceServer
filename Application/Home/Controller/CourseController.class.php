@@ -218,30 +218,35 @@ class CourseController extends Controller
         $filepath = $dir . '/' . $course_id . '/' . $filename;
 
         $xml = new \DOMDocument();
-        $xml->load($filepath);
-        //从xml文件中读取的数据存放在此处
-        $stu_data = array();
-        $course_data = array();
+        if($xml->load($filepath)){
+            //从xml文件中读取的数据存放在此处
+            $stu_data = array();
+            $course_data = array();
 
-        $root = $xml->documentElement;
-        $course_data['course_id'] = $root->getElementsByTagName("courseid")->item[0]->nodeValue;
-        $course_data['date'] = $root->getElementsByTagName("date")->item[0]->nodeValue;
-        $course_data['begin_time'] = $root->getElementsByTagName("ts")->item[0]->nodeValue;
-        $course_data['end_time'] = $root->getElementsByTagName("te")->item[0]->nodeValue;
+            $root = $xml->documentElement;
+            $course_data['course_id'] = $root->getElementsByTagName("courseid")->item[0]->nodeValue;
+            $course_data['date'] = $root->getElementsByTagName("date")->item[0]->nodeValue;
+            $course_data['begin_time'] = $root->getElementsByTagName("ts")->item[0]->nodeValue;
+            $course_data['end_time'] = $root->getElementsByTagName("te")->item[0]->nodeValue;
 
-        $students = $root->getElementsByTagName("stu");
-        foreach ($students as $stu) {
-            $data = array();
-            $data['id'] = $stu->getElementsByTagName("id")->item[0]->nodeValue;
-            $data['name'] = $stu->getElementsByTagName("name")->item[0]->nodeValue;
-            $data['college'] = $stu->getElementsByTagName("college")->item[0]->nodeValue;
-            $data['major'] = $stu->getElementsByTagName("major")->item[0]->nodeValue;
-            $data['class'] = $stu->getElementsByTagName("sclass")->item[0]->nodeValue;
-            $data['sex'] = $stu->getElementsByTagName("sex")->item[0]->nodeValue;
-            $data['check'] = $stu->getElementsByTagName("check")->item[0]->nodeValue;
-            $data['arrive_time'] = $stu->getElementsByTagName("arrive_time")->item[0]->nodeValue;
-            array_push($stu_data, $data);
+            $students = $root->getElementsByTagName("stu");
+            foreach ($students as $stu) {
+                $data = array();
+                $data['id'] = $stu->getElementsByTagName("id")->item[0]->nodeValue;
+                $data['name'] = $stu->getElementsByTagName("name")->item[0]->nodeValue;
+                $data['college'] = $stu->getElementsByTagName("college")->item[0]->nodeValue;
+                $data['major'] = $stu->getElementsByTagName("major")->item[0]->nodeValue;
+                $data['class'] = $stu->getElementsByTagName("sclass")->item[0]->nodeValue;
+                $data['sex'] = $stu->getElementsByTagName("sex")->item[0]->nodeValue;
+                $data['check'] = $stu->getElementsByTagName("check")->item[0]->nodeValue;
+                $data['arrive_time'] = $stu->getElementsByTagName("arrive_time")->item[0]->nodeValue;
+                array_push($stu_data, $data);
+            }
         }
+        else{
+            var_dump("文件不存在");
+        }
+
 
         $this->assign("course_id", $course_id);
         $this->assign("course_name", $course_name);
