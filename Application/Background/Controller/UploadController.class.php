@@ -70,7 +70,7 @@ class UploadController extends Controller {
                     $model = M('Course');
                     $model->where("cid=$course_id")->setDec("times");
 
-                    $model = M("Absence");
+                    $model = M("Attendance");
                     foreach($elm as $node){
                         $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
                         $model->where("sid='$stu_id' and cid='$course_id'")->delete();
@@ -97,7 +97,7 @@ class UploadController extends Controller {
 
             //增加缺勤情况
             $elm = $root->getElementsByTagName("stu");
-            $model = D("Attendance");
+            $model = M("Attendance");
             foreach($elm as $node) {
                 $stu_id = $node->getElementsByTagName("id")->item(0)->nodeValue;
                 $data['cid'] = $course_id;
